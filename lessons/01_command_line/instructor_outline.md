@@ -20,11 +20,11 @@
 ## 4. Listing files/directories with `ls`
 * Explain the abbreviation
 * Demonstrate `ls` command
-    * May need to use `dir` for PC 
+    * May need to use `dir` for PC
 * Show that this is equivalent to looking at files in finder/Windows explorer
 * Introduce `ls -l` with flag for detailed file info
-  
-## 5. Displaying text file contents with `cat` 
+
+## 5. Displaying text file contents with `cat`
 * Explain the abbreviation
 * Make or put some sort of text file in Desktop or Documents, and demonstrate printing contents
     * May need to use `type` for PC users
@@ -47,4 +47,3 @@
 * In VSCode, edit `hello_world.py` to print a message to the user
 * Show how python scripts can be run from command line with `python hello_world.py`
 * Explain workflow between command line/text editor
-
