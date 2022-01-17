@@ -1,5 +1,5 @@
 ## 1. Show students the command line app/help them get set up
-* Terminal on Mac / Anaconda Powershell Prompt on PC
+* Terminal on Mac / Command Prompt on PC
 * Explain that this will look different for everyone
 
 ## 2. Introduce concept of 'working directory'

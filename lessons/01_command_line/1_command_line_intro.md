@@ -1,7 +1,6 @@
 # Before class
 
 * Install the text editor [VSCode](https://code.visualstudio.com/)
-* Install Anaconda
 
 # Outline of class agenda
 
@@ -17,7 +16,7 @@ By the end of this class, you'll:
 
 The "command line" is a way to interact with your computer just like using the mouse to click on programs and run them. Although the command line might be a steep learning curve at first, it is REALLY useful for many things in programming, and it is something you will use a lot and get very comfortable with during this course.
 
-If you're using a Mac, you can open Terminal to get to your command line prompt. If you're using a PC, open the Anaconda PowerShell Prompt.
+If you're using a Mac, you can open Terminal to get to your command line prompt. If you're using a PC, open the Command Prompt.
 
 Either way, when you open your command line prompt, you should see a `$` symbol at the end of the line.
 

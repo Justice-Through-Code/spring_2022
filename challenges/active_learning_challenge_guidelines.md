@@ -1,6 +1,6 @@
 # Guidelines for active learning exercises:
 
-In general, we want these exercises to feel **'relevant'** to students, so they can really see how the foundational concepts they're learning in python or at the command line apply in work settings. 
+In general, we want these exercises to feel **'relevant'** to students, so they can really see how the foundational concepts they're learning in python or at the command line apply in work settings.
 
 In the past, examples based on things like creating mock 'user accounts' for twitter or bank accounts, working with Spotify songs and artist information, pieces of develping websites, or data related to covid-19 have seemed to resonate with students to show them that they can use their coding skills to solve real-world tasks.
 
@@ -25,6 +25,5 @@ In general, we're hoping to set up these exercises so that students can work on 
 * In any exercise, if there is helper code that we have written that is beyond the scope of what students currently know, it should be **clearly separated** from the pieces students are writing. Either
   * In a separate script (ideal for longer/more complex code that we don't want them to worry about)
   * In separate functions that have clear indications that students don't need to edit them
-* Ideally should require no installations beyond what comes with default Anaconda. 
-  * If some exercises ask students to install a library or two via `pip install` that's okay, but this should be well-documented in the markdown, and students shouldn't have to learn any new code to use the newly installed library.
+* If some exercises ask students to install a library or two via `pip install` that's okay, but this should be well-documented in the markdown, and students shouldn't have to learn any new code to use the newly installed library.
 * Eventually, we're hoping to have some of the active learning exercises build up into a larger 'project' over the course of the bootcamp. Not all exercises have to be part of this though
