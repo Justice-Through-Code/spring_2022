@@ -102,7 +102,7 @@ In the Finder/File Explorer, it automatically shows you what's inside your curre
 
 <img src="images/command_line_4.png" width="700">
 
-Again, his is equivalent to opening up the same folder in your finder/file explorer and looking around. For example, if I go in finder to this folder, it has the same contents, just displayed a little differently:
+Again, this is equivalent to opening up the same folder in your finder/file explorer and looking around. For example, if I go in finder to this folder, it has the same contents, just displayed a little differently:
 
 <img src="images/command_line_5.png" width="300">
 
@@ -129,9 +129,9 @@ cd | cd | Change the current directory
 
 ### c) Navigate to the `Documents` folder.
 
-Now that we know where our `Documents` folder _is_, we need to go to it! In the Finder/File Explorer, we do this simply by clicking on it. In the command line, moving to a different folder is called **changing directories**. The command for this is actually the same no matter what computer you're using-- `cd` for 'change directory'.
+Now that we know where our `Documents` folder _is_, we need to go to it! In the Finder/File Explorer, we do this simply by clicking on it. In the command line, moving to a different folder is called "**changing directories**". The command for this is actually the same no matter what computer you're using-- `cd` for 'change directory'.
 
-This command works a little differently than the others we've used so far-- we're telling the computer that we need to change our directory, but which one do we want to go to instead? We need to tell the computer that too.
+This command works a little differently than the others we've used so far-- we're telling the computer that we need to change our directory, but which one do we want to go *to*? We need to tell the computer that too.
 
 To change directories in the command line, you type `cd <directory-name>`. So in this case, that would be `cd Documents`.
 
@@ -147,7 +147,7 @@ So, we can see that we are actually in the Documents folder. If we run `ls`, we 
 
 We can see the same things in the `Documents` directory whether we look in Finder (left) or via the command line (right).
 
-## 7. Changing working directory
+## 7. Create new directory
 
 Terminal | File Explorer | Description
 -------- | ------------- | -----------
@@ -155,7 +155,7 @@ mkdir | md | To create a new directory/folder
 
 ### d) Create/name new folder
 
-We made it! Now that we're in the right folder, we can finally make our new folder for this class. This command works the same way the `cd` does-- we need to tell the computer not just which command we're using, but also the name of folder we're talking about. In this case, what we want to _name_ our new folder. `mkdir <new-directory-name>`. This will be the real folder we use for the class, so let's name it accordingly. Based on your computer, create a new folder by either typing `mkdir JTC` or `md JTC`.
+We made it! Now that we're in the right place, we can finally make our new folder for this class. This command works the same way that `cd` does-- we need to tell the computer not just which command we're using, but also the name of folder we're talking about. In this case, what we want to _name_ our new folder. `mkdir <new-directory-name>`. This will be the real folder we use for the class, so let's name it accordingly. Based on your computer, create a new folder by either typing `mkdir JTC` or `md JTC`.
 
 Make sure to check your Finder/File Explorer, and you should see your new folder there too!
 
