@@ -163,7 +163,7 @@ Make sure to check your Finder/File Explorer, and you should see your new folder
 
 You now know how to use a core tool to control your computer like a programmer. There are [many other commands](https://www.geeksforgeeks.org/linux-vs-windows-commands/) you can use, a couple of which you'll see in the challenge tonight. But they're always a google away, so no sweat if you don't remember them!
 
-We'll discuss your `code editor`, `VSCode`, more in future classes, but for now, open it up.
+We'll discuss your `code editor`, `VSCode`, more later, but for now, open it up.
 
 It comes with a built in version of `Terminal` that runs even on Windows machines.
 
