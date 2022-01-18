@@ -21,13 +21,13 @@ Most computers come with a built in way to interact with your files and applicat
 
 You can think of everything you see here as folders. Folders can hold files, applications, more folders, etc. You might see an `Applications` Folder that holds all of your applications. A `Downloads` Folder holds any files you download from the internet. A `Documents` or `My Documents` Folder will hold all of your documents.
 
-To get familiar with the finder, navigate to your `Documents` or `My Documents` folder and create a new folder inside of it called `JTC-Test`. If you're not sure how, try clicking around the menu, or even feel free to Google it.
+To get familiar with the Finder/File Explorer, navigate to your `Documents` or `My Documents` folder and create a new folder inside of it called `JTC-Test`. If you're not sure how, try clicking around the menu, or even feel free to Google it.
 
 ## 2. The command line
 
 The "command line" is another way to interact with your computer just like the Finder/File Explorer. The difference is that instead of giving your computer instructions by clicking buttons or dragging and dropping, you'll now be _typing_ your instructions (aka 'commands'). This will give us a lot more flexibility and power over our computers in the long run. We're going to do the exact same thing that we just did in the Finder/File Explorer, but this time, using the command line.
 
-If you're using a Mac, you can open Terminal to get to your command line prompt. If you're using a PC, open the Command Prompt.
+If you're using a Mac, you can open the `Terminal` to get to your command line prompt. If you're using a PC, open the `Command Prompt`.
 
 When you open your command line prompt, you should either see a `$` symbol or `>` symbol at the end of the line.
 
@@ -41,10 +41,13 @@ The steps we took to create a folder in the Finder/File Explorer may have felt i
 
 Our steps could be written out like this:
 
-a. Figure out where we are in the file structure.
-b. Figure out where the `Documents` folder is.
-c. Navigate to the `Documents` folder.
-d. Create/name new folder
+a) Figure out where we are in the file structure.
+
+b) Figure out where the `Documents` folder is.
+
+c) Navigate to the `Documents` folder.
+
+d) Create/name new folder
 
 Let's see how these steps translate to the command line.
 
@@ -57,7 +60,7 @@ Let's see how these steps translate to the command line.
 ##### NOTE:
 When someone built the `Terminal`, they decided what to name each command. Someone else built the `Command Prompt`, and chose different names for the same instructions. That's why these instructions are different depending on your computer. Either way, when you tell your computer to do something in the command line, you're using *code*!
 
-### a. Figure out where we are in the file structure
+### a) Figure out where we are in the file structure
 
 Terminal | File Explorer | Description
 -------- | ------------- | -----------
@@ -93,7 +96,7 @@ Terminal | File Explorer | Description
 -------- | ------------- | -----------
 ls | dir | Directory listing
 
-### b. Figure out where the `Documents` folder is.
+### b) Figure out where the `Documents` folder is.
 
 In the Finder/File Explorer, it automatically shows you what's inside your current folder. To see what files and folders are in your **working directory** from the command line, you need to tell the computer to list out the files and folders in your working directory. Use your respective computer's command, either `ls` or `dir`.
 
@@ -124,7 +127,7 @@ Terminal | File Explorer | Description
 -------- | ------------- | -----------
 cd | cd | Change the current directory
 
-### c. Navigate to the `Documents` folder.
+### c) Navigate to the `Documents` folder.
 
 Now that we know where our `Documents` folder _is_, we need to go to it! In the Finder/File Explorer, we do this simply by clicking on it. In the command line, moving to a different folder is called **changing directories**. The command for this is actually the same no matter what computer you're using-- `cd` for 'change directory'.
 
@@ -150,7 +153,7 @@ Terminal | File Explorer | Description
 -------- | ------------- | -----------
 mkdir | md | To create a new directory/folder
 
-### d. Create/name new folder
+### d) Create/name new folder
 
 We made it! Now that we're in the right folder, we can finally make our new folder for this class. This command works the same way the `cd` does-- we need to tell the computer not just which command we're using, but also the name of folder we're talking about. In this case, what we want to _name_ our new folder. `mkdir <new-directory-name>`. This will be the real folder we use for the class, so let's name it accordingly. Based on your computer, create a new folder by either typing `mkdir JTC` or `md JTC`.
 
