@@ -51,7 +51,7 @@ We can see that when we run the script, we get 'hi, this is your computer speaki
 
 You'll notice that we needed to put both *single quotes and parenthesis* around the actual text we wanted to print out.
 * The quotes are to turn our text into something called a 'string'. We'll get into more detail about this soon when we cover [strings](https://www.w3schools.com/python/python_strings.asp) (tldr: strings always have quotes around them).
-* In Python version 3 (most likely what you're using for this class), you need to put any text that you want to print out in parentheses.
+* In Python version 3 (most likely what you're using for this class), you need to put any _text_ that you want to print out in parentheses.
 
 Let's see what happens if we leave out the parentheses and change the script to:
 
@@ -72,8 +72,10 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hi this
 Errors can feel overwhelming, but they actually give us a lot of useful knowledge about how to fix our code. You can see it tells us
 
 `File "print_exercise.py", line 1`: which file and line the error starts on,
+
 `print 'hi this is your computer speaking'`: The breaking code on that line, and
-`SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hi this is your computer speaking')?`: Even gives us a suggestion of how to fix it, along with what _type_ of error it is (in this case a `SyntaxError`. We'll see a lot of these).
+
+`SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hi this is your computer speaking')?`: Even gives us a suggestion of how to fix it, along with what _type_ of error it is (in this case a `SyntaxError`. We'll see a lot of these.
 
 ### Printing multiple things
 
@@ -133,7 +135,7 @@ print(1 - 3)
 This gives us the answers we'd expect for each equation:
 
 ```console
-python integers_floats.py
+$ python3 integers_floats.py
 4
 4
 3
@@ -153,7 +155,7 @@ print(1 - 3)
 Now we see the output we expect.
 
 ```console
-python integers_floats.py
+$ python3 integers_floats.py
 4
 3
 -2
@@ -167,7 +169,7 @@ Commenting out code that we want to ignore isn't the only thing comments are goo
 
 Want to comment a bunch of lines out at one time? You can do this in many code editors on a Mac with `command` + `/`, or on Windows with `control` + `/`
 
-#### Math in python
+### Math in python
 
 One of the benefits of code is that it can do complex work (like math) for us. In order for us to utilize this power, we need to know how to tell the computer what to do.
 
@@ -187,7 +189,7 @@ print(5 ** 2)
 ```
 
 ```console
-python integers_floats.py
+$ python3 integers_floats.py
 2.0
 25
 ```
@@ -216,31 +218,34 @@ $ python integers_floats.py
 Just like a calculator, python uses the 'order of operations' to evaluate equations. The acronym [PEMDAS](https://thehelloworldprogram.com/python/python-operators-order-precedence/) tells us the order in which python will evaluate:
 
 * **P**arentheses
-* **E**xponenents
+* **E**xponents
 * **M**ultiplication
 * **D**ivision
 * **A**ddition
 * **S**ubtraction
 
 So, if we have the following code:
+
 ```python
 print(2 + 3 * 4)
 print((2 + 3) * 4)
 ```
 
 We can expect the result to be:
-2 + 3 * 4: 3 * 4 = 12; 2 + 12 = **14**
-(2 + 3) * 4: (2 + 3) = 5; 5 * 4 = **20**
+
+`2 + 3 * 4`: 3 * 4 = 12; 2 + 12 = **14**
+
+`(2 + 3) * 4`: (2 + 3) = 5; 5 * 4 = **20**
 
 And we get:
 
 ```console
-$python integers_floats.py
+$ python3 integers_floats.py
 14
 20
 ```
 
-Don't worry, we won't be making you do too much math! And like everything, these math rules can always be googled if and when you need them.
+Don't worry, you won't need to do too much math in this course! And like everything, these math rules can always be googled if and when you need them.
 
 ### Type conversion
 
@@ -255,7 +260,7 @@ print(int(3.856))
 gets
 
 ```console
-$python integers_floats.py
+$ python3 integers_floats.py
 2.0
 3
 ```
@@ -267,27 +272,27 @@ print(round(3.856))
 ```
 
 ```console
-$python integers_floats.py
+$ python3 integers_floats.py
 4
 ```
 
-#### Primitive data types
+### Primitive data types
 
 So far today we've worked with 3 different types of data: strings, integers, and floats. Along with a fourth data type called a `boolean` that we'll learn about in a later class, these are what's called the [primitive data types](https://able.bio/ZoranPandovski/understanding-python-3-data-types-string-int-float-and-boolean--57tqcfp) of python (and most other coding languages). You can think of the primitive data types kind of like the primary colors-- all more complex colors, and more complex types of data, will be built on top of these.
 
 
-## BREAK - 3 minutes
+## BREAK - 5 minutes
 
 ## Variables
 
-Often you'll want to keep track of different pieces of data so that you can use them multiple times. When we want to save a piece of data to use later in our script, we can save it as a **variable**.
+Often you'll want to keep track of different pieces of data so that you can use them multiple times. When we want to save a piece of data to use later in our script, we can save it in a **variable**.
 
 
 To learn about variables, let's make a new script in the `bootcamp_scripts` folder called `variables.py`
 
 #### What is a variable?
 
-One way to think of a variable is as a box you can put other things into, and you can use the name of the box wherever you want in your code to refer to what's inside the box.
+One way to think of a variable is as a box you can put other things into, and you can use the name of the box wherever you want your code to refer to what's inside the box.
 
 Let's see a real life example:
 
@@ -317,26 +322,30 @@ print(christmas_decorations)
 ```
 
 ```console
-$ python variables.py
+$ python3 variables.py
 tinsel
 ```
 
-There it is! Note that we don't need quotes around our variable name in order to print it out. The variable `christmas_decorations` is holding a string with the word `'tinsel'` in it. The quotes that tell us that `'tinsel'` is a string are already around the _data_ in our variable. As with any box, we can change what's inside it without changing the box. For instance, let's change what's inside our variable and print it out each time.
+There it is! Note that we don't need quotes around our variable name in order to print it out. In fact, putting quotes around the variable name would print out the word `'christmas_decorations'`, not our variable. By printing out the variable name, we're telling Python that hey, we have a 'box' in our code, called `christmas_decorations`, that's holding some data. Please go grab that box and print out what's inside it.
+
+As with any box, we can change what's inside without changing the box. For instance, let's change what's inside our variable and print it out each time.
 
 ```python
 # assign a variable
 christmas_decorations = 'tinsel'
 print(christmas_decorations)
+
 # update the variable data
 christmas_decorations = 'christmas lights'
 print(christmas_decorations)
+
 # update the variable data
 christmas_decorations = 'ornaments'
 print(christmas_decorations)
 ```
 
 ```console
-$ python variables.py
+$ python3 variables.py
 tinsel
 christmas lights
 ornaments
@@ -348,7 +357,7 @@ We can update variables as many times as we want, but it is important to keep in
 
 #### Variables in action
 
-We can see how powerful variables are when we need to keep track of things like numbers.
+We can see how powerful variables are when we need to keep track of things like amounts.
 
 Say you're having some people over and you need to figure out how much food and drink to get. We can use variable names to help us decide:
 
@@ -368,7 +377,7 @@ print(number_of_people * ice_cream_per_person)
 This gets us:
 
 ```console
-$ python variables.py
+$ python3 variables.py
 How many drinks to get:
 15
 How much ice cream to get:
@@ -393,7 +402,7 @@ print(number_of_people * ice_cream_per_person)
 Becomes
 
 ```console
-$ python variables.py
+$ python3 variables.py
 How many drinks to get:
 12
 How much ice cream to get:
@@ -432,7 +441,7 @@ print(number_of_people * ice_cream_per_person)
 Now, when you run the script, you'll see:
 
 ```console
-$ python variables.py
+$ python3 variables.py
 Traceback (most recent call last):
   File "variables.py", line 7, in <module>
     print(number_of_people * drinks_per_person)
