@@ -12,10 +12,10 @@
 Today is our first class of Python Bootcamp material! By the end of the lesson, you'll:
 
 1. Be able to write python scripts that output or `print` things
-2. Be able to include comments in your python scripts
-3. Feel comfortable assigning and updating variables
-4. Feel comfortable working with the Integer data type
-5. Feel comfortable working with the Float data type
+2. Feel comfortable working with the Integer data type
+3. Feel comfortable working with the Float data type
+4. Be able to include comments in your python scripts
+5. Feel comfortable assigning and updating variables
 
 
 # Class
@@ -39,7 +39,7 @@ To get started, let's print out some text just like we did with the `hello_world
 print('hi, this is your computer speaking')
 ```
 
-Now, run your script from the command line (make sure you've set bootcamp script as your working directory) with:
+Now, run your script from the command line (make sure you've `cd`'d into your `bootcamp_scripts` folder) with:
 
 ```console
 $ python3 print_exercise.py
@@ -49,7 +49,7 @@ We can see that when we run the script, we get 'hi, this is your computer speaki
 
 ### Printing requires parentheses!
 
-You'll notice that we needed to put both *single quotes and parenthesis* around the actual text we wanted to print out.
+You'll notice that we needed to put both *single quotes and parentheses* around the actual text we wanted to print out.
 * The quotes are to turn our text into something called a 'string'. We'll get into more detail about this soon when we cover [strings](https://www.w3schools.com/python/python_strings.asp) (tldr: strings always have quotes around them).
 * In Python version 3 (most likely what you're using for this class), you need to put any _text_ that you want to print out in parentheses.
 
@@ -65,7 +65,7 @@ Then if we run it from the command line again, we see:
 $ python3 print_exercise.py
   File "print_exercise.py", line 1
     print 'hi this is your computer speaking'
-                                            ^
+          ^
 SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hi this is your computer speaking')?
 ```
 
@@ -75,7 +75,7 @@ Errors can feel overwhelming, but they actually give us a lot of useful knowledg
 
 `print 'hi this is your computer speaking'`: The breaking code on that line, and
 
-`SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hi this is your computer speaking')?`: Even gives us a suggestion of how to fix it, along with what _type_ of error it is (in this case a `SyntaxError`. We'll see a lot of these.
+`SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hi this is your computer speaking')?`: Even gives us a suggestion of how to fix it, along with what _type_ of error it is (in this case a `SyntaxError`. We'll see a lot of those).
 
 ### Printing multiple things
 
@@ -114,7 +114,7 @@ SyntaxError: invalid syntax
 Because python runs code line-by-line, we can only put one print statement per line.
 
 
-## 2. Printing Integers and Floats
+## 2 & 3. Integers and Floats
 
 You can print out a lot more than just words with the print function. Python lets you print out numbers, and even do math inside your print statements. Let's make a new file called `integers_floats.py`.
 
@@ -142,7 +142,7 @@ $ python3 integers_floats.py
 -2
 ```
 
-Where does that first `4` come from? Notice that our earlier printout, `print(4)` is still there. When we don't want to erase code, but we want the computer to ignore it, we can do something called 'commenting it out'. You can turn any line in your script into a comment by putting a `#` at the front of the line. The computer will ignore any line with a hashtag at the front. Let's try it.
+Where does that first `4` come from? Notice that our earlier printout, `print(4)` is still there. When we don't want to erase code, but we want the computer to ignore it, we can do something called 'commenting it out'. You can turn any line in your script into a **comment** by putting a `#` at the front of the line. The computer will ignore any line with a hashtag at the front. Let's try it.
 
 ```python
 # print(4)
@@ -165,7 +165,7 @@ Note that the computer also ignored the empty line we added. It ignores all of t
 
 Commenting out code that we want to ignore isn't the only thing comments are good for. In fact, adding comments to your code that describe what the code is doing is one of the most important things you can do. Both [for yourself](https://dev.to/sunnysingh/writing-code-for-your-future-self-3da2) and for any teammates you're writing your code with. You can check out [this guide](https://realpython.com/python-comments-guide/) for writing effective comments in your code.
 
-#### Commenting out big chunks
+### Commenting out big chunks
 
 Want to comment a bunch of lines out at one time? You can do this in many code editors on a Mac with `command` + `/`, or on Windows with `control` + `/`
 
@@ -283,7 +283,7 @@ So far today we've worked with 3 different types of data: strings, integers, and
 
 ## BREAK - 5 minutes
 
-## Variables
+## 4. Variables
 
 Often you'll want to keep track of different pieces of data so that you can use them multiple times. When we want to save a piece of data to use later in our script, we can save it in a **variable**.
 
@@ -292,7 +292,7 @@ To learn about variables, let's make a new script in the `bootcamp_scripts` fold
 
 #### What is a variable?
 
-One way to think of a variable is as a box you can put other things into, and you can use the name of the box wherever you want your code to refer to what's inside the box.
+One way to think of a variable is as a box you can put other things into, and you can use the name of the box wherever you want your code to refer to what's inside.
 
 Let's see a real life example:
 
@@ -409,7 +409,7 @@ How much ice cream to get:
 4
 ```
 
-#### Variable naming conventions
+### Variable naming conventions
 
 There are a few rules for naming variables:
  * They can't start with numbers
@@ -421,7 +421,7 @@ Rules aside, one very useful convention is to use all lowercase letters in varia
 
 Check out the [PEP 8 guide](https://www.python.org/dev/peps/pep-0008/#method-names-and-instance-variables) for more info on style in creating variable names.
 
-#### Variable errors
+### Variable errors
 
 One problem you might hit a lot is if you misspell a variable name. For example, let's update our variable name to shorten it like we talked about:
 

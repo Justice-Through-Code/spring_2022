@@ -2,15 +2,17 @@
 
 **First, have students make a folder called `bootcamp_scripts` in the `class_scripts` folder in their `jtc_class_code` github repo (`.../jtc_class_code/class_scripts/bootcamp_scripts`).**
 
--   We can use this folder over the rest of the bootcamp for stroring practice scripts made in lessons
+-   We can use this folder over the rest of the bootcamp for storing practice scripts made in lessons
 
 ** Tell students this is day 1 of Python Bootcamp and explain lesson outline**
 
 Today is our first class of Python Bootcamp material! By the end of the lesson, you'll:
 
 1. Be able to write python scripts that output or `print` things
-2. Be able to include comments in your python scripts
-3. Feel comfortable assigning and updating variables
+2. Feel comfortable working with the Integer data type
+3. Feel comfortable working with the Float data type
+4. Be able to include comments in your python scripts
+5. Feel comfortable assigning and updating variables
 
 ## 1. Print statements
 
@@ -45,6 +47,10 @@ print('i can run a lot of python code')
 ```python
 print('hi, this is your computer speaking') print('i can run a lot of python code')
 ```
+
+## 2 & 3 Integers and Floats
+
+Show students that numbers don't need
 
 ## 2. Comments
 
