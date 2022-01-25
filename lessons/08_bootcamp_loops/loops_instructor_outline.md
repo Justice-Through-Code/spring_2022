@@ -24,10 +24,10 @@ for number in numbers:
 ```
 
 
-## 4. What is 'in' versus 'out' of the loop? 
+## 4. What is 'in' versus 'out' of the loop?
 
 * Show that any indented code in the loop is run each iteration
-* Show how indents matter here again! 
+* Show how indents matter here again!
 
 
 ## 5. Using `range()` with loops
@@ -107,7 +107,7 @@ while (count < 5):
 print('done')
 ```
 
-## Looping through a string 
+## Looping through a string
 
 Explain that can loop over individual characters in a string
 

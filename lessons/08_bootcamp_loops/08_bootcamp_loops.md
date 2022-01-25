@@ -1,4 +1,4 @@
-# Bootcamp Class 9 - Loops
+# Bootcamp Class 8 - Loops
 
 <img src="https://dq-blog-files.s3.amazonaws.com/list-tutorial/py1m2_loops.gif" width="500">
 
@@ -50,7 +50,7 @@ for number in numbers:
 This gives us the following printout. Notice that each number is printed on a line of its own:
 
 ```console
-$ python loop_practice.py 
+$ python loop_practice.py
 12
 8
 41
@@ -65,7 +65,7 @@ So, what is actually happening here?
 
 ### The name of the iterator variable doesn't matter
 
-Here, we used a variable called `number` to iterate through a list of numbers, but what this variable is called actually doesn't matter -- we just have to be consistent with how we use it. In fact, we can change this variable to be called whatever we want, and we'll get the same output. 
+Here, we used a variable called `number` to iterate through a list of numbers, but what this variable is called actually doesn't matter -- we just have to be consistent with how we use it. In fact, we can change this variable to be called whatever we want, and we'll get the same output.
 
 ```python
 # make a list of integers
@@ -76,7 +76,7 @@ for spaghetti in numbers:
     print(spaghetti)
 ```
 
-Even though we changed the iterator variable here to `spaghetti`, which has nothing to do with our list of integers, this still works fine. 
+Even though we changed the iterator variable here to `spaghetti`, which has nothing to do with our list of integers, this still works fine.
 
 ### Any indented code happens inside the loop
 
@@ -107,7 +107,7 @@ hello world
 hi, computer!
 ```
 
-Because `print('hello world')` is **indented**, it runs **each time** in the loop. However, because  `print('hi, computer!')` is not, it is **outside the loop**, and just runs once after the loop is finished. 
+Because `print('hello world')` is **indented**, it runs **each time** in the loop. However, because  `print('hi, computer!')` is not, it is **outside the loop**, and just runs once after the loop is finished.
 
 ### Loops can contain lots of different operations
 
@@ -147,7 +147,7 @@ It's a bit annoying to look at the output of this one, but we get each letter pr
 i
 c
 e
- 
+
 c
 r
 e
@@ -212,7 +212,7 @@ This gives us:
 7
 ```
 
-Notice, like with indices, this starts at 0 and does NOT include 8. 
+Notice, like with indices, this starts at 0 and does NOT include 8.
 
 However, where `range()` can come in most useful is in looping through lists using their **indices**. For example, if we combine `range()` with `len()` to get the length of a list `range(len(my_list))` will always give all the indices of the list for iterating through.
 
@@ -233,7 +233,7 @@ This prints out:
 5
 ```
 
-The **key** thing here is that here, **i stands for the indices of `lower_list`, not the actual elements**. We are iterating through the elemtns of the list, but unlike earlier, i is just an integer that stands for each index in the list in turn. 
+The **key** thing here is that here, **i stands for the indices of `lower_list`, not the actual elements**. We are iterating through the elemtns of the list, but unlike earlier, i is just an integer that stands for each index in the list in turn.
 
 If we want to, we can still access each **element of the list** this way by using bracket indexing.
 
@@ -261,7 +261,7 @@ Differentiating the **index from the list element** can be tricky in loops espec
 
 We've mostly talked about **for loops** today, but there is one other kind of loop in python that is really important to know about, the **while loop**.
 
-Basically, **a while loop keeps repeating until a certain logical condition is met**. Unlike for loops, which run a set number of times, while loops could run an undefined amount of times while waiting for a condition to be met. 
+Basically, **a while loop keeps repeating until a certain logical condition is met**. Unlike for loops, which run a set number of times, while loops could run an undefined amount of times while waiting for a condition to be met.
 
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20191101170515/while-loop.jpg" width="500">

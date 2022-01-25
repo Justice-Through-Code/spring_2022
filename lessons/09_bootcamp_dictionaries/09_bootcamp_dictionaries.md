@@ -1,4 +1,4 @@
-# Bootcamp Class 8 - Dictionaries
+# Bootcamp Class 9 - Dictionaries
 
 <img src="https://lh3.googleusercontent.com/proxy/Mw1Z5gcj1XZrURnu4sMZrzDQJ6m1JEM3MgVu7opC_24OJ3SCKnY04aD4K-4AjQO0FBfKxWkNimg2RqA0PVHrIFPLwLo-cM56dskbbyew6-k" width="600">
 
@@ -19,8 +19,8 @@ Today we'll learn about [**dictionaries**](https://www.python-course.eu/dictiona
 
 # What is a dictionary?
 
-We can think of **dictionary** in python through using the metaphor of a physical dictionary. 
-* In a physical dictionary, we look up a word, and then get information about that word (the definition, pronunciation, etc). 
+We can think of **dictionary** in python through using the metaphor of a physical dictionary.
+* In a physical dictionary, we look up a word, and then get information about that word (the definition, pronunciation, etc).
 * A dictionary in python is very similar in that each part of the dictionary has a **key** (i.e. the word), and a corresponding **value** (i.e. the definition). All data in a dictionary is made up of these [**key-value pairs**](https://www.geeksforgeeks.org/add-a-keyvalue-pair-to-dictionary-in-python/#:~:text=Dictionary%20in%20Python%20is%20an,key%2Fvalue%20inside%20the%20dictionary.).
     * Another way of thinking about this is that every piece of data in a dictionary has a **label** (i.e. the key). This is unlike lists, where each element does not have a label
 * Unlike lists, **dictionaries do not have order in python**
@@ -66,7 +66,7 @@ So, now there is a 'username' and a 'balance', which are represented by a string
 
 ```python
 # this is equivalent to the previous code block
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26}
 ```
 
@@ -77,7 +77,7 @@ This format is especially useful if we have a lot of key value pairs.
 We can use `print()` on an entire dictionary to see what all the contents are!
 
 ```python
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26}
 print(user_account)
 ```
@@ -88,12 +88,12 @@ When we run this code, we get:
 ```
 
 
-### Retrieving data from a dictionary 
+### Retrieving data from a dictionary
 
 If we want to pull out a specific value from the dictionary, we reference it by it's key. So, if I want to get just the `balance` variable from `user_account`, I can run:
 
 ```python
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26}
 my_money = user_account['balance']
 print(my_money)
@@ -105,7 +105,7 @@ When we print `my_money`, we now just have the float **value**, that was paired 
 270.26
 ```
 
-Every time we want a **specific value** from a dictionary like this, we use this syntax -- the name of the dictionary, followed by hard brackets with the string name of the **key** (in quotes) inside. 
+Every time we want a **specific value** from a dictionary like this, we use this syntax -- the name of the dictionary, followed by hard brackets with the string name of the **key** (in quotes) inside.
 
 As another example, if we wanted to get just the username, we could run:
 
@@ -113,15 +113,15 @@ As another example, if we wanted to get just the username, we could run:
 my_username = user_account['username']
 ```
 
-Now, `my_username` is a *string* that is the **value** paired with the key `username` in the `user_account` dictionary. 
+Now, `my_username` is a *string* that is the **value** paired with the key `username` in the `user_account` dictionary.
 
 
 ### Dictionaries can store all sorts of data
 
-So far we've seen strings and floats in a dictionary, but the *values* can be almost any kind of data. To demonstrate this, let's add some extra information to `user_account`. 
+So far we've seen strings and floats in a dictionary, but the *values* can be almost any kind of data. To demonstrate this, let's add some extra information to `user_account`.
 
 ```python
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26,
                 'deposits':[100.00, 21.34, 2.31, 8.06],
                 'withdrawals':[-2.31, -21.43, -78.00],
@@ -144,7 +144,7 @@ Having a list inside a dictionary might seem confusing, but it can be really use
 To add a new item to a dictionary, we add a new key-value pair like so:
 
 ```python
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26}
 
 # add a new value of '9/15/2020' using the key 'last_transaction'
@@ -176,7 +176,7 @@ Updating items in a dictionary is almost exactly the same as adding new items, e
 So here, let's update the `balance`:
 
 ```python
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26}
 
 # update the balance
@@ -198,7 +198,7 @@ Note: when updating a variable in a dictionary, we don't have to replace it with
 When removing data from a dictionary, we remove an entire key value pair, since the value can't exist in the dictionary without the key. To do this, we use the `pop()` function with the name of the **key** to remove the whole pair. For example
 
 ```python
-user_account = {'username':'pbloom', 
+user_account = {'username':'pbloom',
                 'balance':270.26}
 
 # we remove 'balance'
@@ -242,4 +242,4 @@ Lists and dictionaries are both foundational data types in python, and you'll mo
 
 ### Next up: loops!
 
-We've hinted at this a few times, but we will soon be getting to loops! This is a powerful way to apply operations to many pieces of data in sequence. If you can't wait to give this a try, you can check out [this page](https://www.w3schools.com/python/python_for_loops.asp) for a quick intro. 
+We've hinted at this a few times, but we will soon be getting to loops! This is a powerful way to apply operations to many pieces of data in sequence. If you can't wait to give this a try, you can check out [this page](https://www.w3schools.com/python/python_for_loops.asp) for a quick intro.
