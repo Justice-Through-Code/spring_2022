@@ -16,24 +16,23 @@ Today we'll learn about **logic** in python. By the end of the lesson, you'll:
     * Get comfortable with using both single equals signs (`=`) and double equals signs (`==`)
     * Use `True`/`False` logic with all primitive data types
 2. Combine logical operations into compound statements with `and`, `or`, and `not`
-3. Feel comfortable with [**conditional statements**](https://realpython.com/python-conditional-statements/), and be able to use them to control how code runs 
+3. Feel comfortable with [**conditional statements**](https://realpython.com/python-conditional-statements/), and be able to use them to control how code runs
     * Use `if`,`elif`, and `else` to control code flow
     * Get comfy with syntax for conditional statements (colons, indenting)
     * Get some experience with nested conditional statements
     * Using conditional statements with user input
-4. Feel comfortable using `assert()` to check whether a certain condition is true before the rest of your code runs    
 
 
 ## 1. Logical Operators
 
 **What is logic in python?**
 * There is really only one question that logic answers, *True or False?*
-* Every single logical operation in python gives us an output of either `True` or `False` as a Boolean variable. 
+* Every single logical operation in python gives us an output of either `True` or `False` as a Boolean variable.
 * We can use this logic to *test* things in python, and have our code depend on these `True` or `False` answers.
 
 ### Numeric logic (math comparisons)
 
-Math might be the most intuitive place to start learning logic. In python, we can ask whether certain **comparisons** of strings and floats are true or not. 
+Math might be the most intuitive place to start learning logic. In python, we can ask whether certain **comparisons** of strings and floats are true or not.
 
 For example, this code asks whether `1` is greater than `0`
 ```python
@@ -74,11 +73,11 @@ is b greater than or equal to c?: True
 is b greater less or equal to c?: True
 ```
 
-One thing to mention here is that the number of spaces before/after the double equals sign don't *really* matter, as long as the code is on the same line and easy to read. Good to stay consistent though. 
+One thing to mention here is that the number of spaces before/after the double equals sign don't *really* matter, as long as the code is on the same line and easy to read. Good to stay consistent though.
 
 ### Equals signs (`=` vs. `==`)
 
-You might be wondering about the double equals sign here. That's normal! This can be very confusing at first, but in python we ALWAYS use **a single equals sign for variable assignment** and **double equals signs to compare whether two variables are equal**. 
+You might be wondering about the double equals sign here. That's normal! This can be very confusing at first, but in python we ALWAYS use **a single equals sign for variable assignment** and **double equals signs to compare whether two variables are equal**.
 
 So if we do something like this:
 
@@ -92,7 +91,7 @@ This is assigning the value of `2` to the variable named `a`. But if we do:
 print(a == 2)
 ```
 
-This will evaluate whether the variable `a` stores a quantity equal to 2. (i.e. we are 'checking inside the box' to see whether 2 is in there). The return will either be the answer `True` or `False`. 
+This will evaluate whether the variable `a` stores a quantity equal to 2. (i.e. we are 'checking inside the box' to see whether 2 is in there). The return will either be the answer `True` or `False`.
 
 ### Comparing integers and floats with another
 
@@ -108,7 +107,7 @@ This gives:
 True
 ```
 
-So, even though integers and floats represent the data differently under the hood, python knows they have the same value for making math comparisons in this situation. 
+So, even though integers and floats represent the data differently under the hood, python knows they have the same value for making math comparisons in this situation.
 
 
 ### Logic with Boolean variables
@@ -145,7 +144,7 @@ We get:
 4.5
 ```
 
-Just as if we had added two numbers together. 
+Just as if we had added two numbers together.
 
 **However, Boolean variables are NOT equal to strings with the same spelling:**
 ```python
@@ -156,7 +155,7 @@ Gives us:
 False
 ```
 
-So, in summary, we can see that booleans can be treated mathematically and compared with floats and integers, but they are not so directly comprable with string data. 
+So, in summary, we can see that booleans can be treated mathematically and compared with floats and integers, but they are not so directly comprable with string data.
 
 ### String Logic
 
@@ -191,7 +190,7 @@ This code evaluates to:
 True
 ```
 Weird! Why?
-* Under the hood, python stores values for every single possible text character using a system called [Unicode](https://docs.python.org/3/howto/unicode.html). We won't go into this here, but python can compare the unicode values for any two characters or strings, and return `True` `False` based on this. For this reason, unless we are **really** sure we know what we want and how to do it, using `>` or `<` to compare strings may not be the most effective. 
+* Under the hood, python stores values for every single possible text character using a system called [Unicode](https://docs.python.org/3/howto/unicode.html). We won't go into this here, but python can compare the unicode values for any two characters or strings, and return `True` `False` based on this. For this reason, unless we are **really** sure we know what we want and how to do it, using `>` or `<` to compare strings may not be the most effective.
 * Comparing strings to integers/floats/booleans can be odd too for the same reasons. For example:
 
 ```python
@@ -206,7 +205,7 @@ False
 False
 ```
 
-For the most part, comparing strings to numeric data this way doesn't serve too many uses. 
+For the most part, comparing strings to numeric data this way doesn't serve too many uses.
 
 ## 2. Compound Logic (`or`, `and`, & `not`)
 
@@ -356,7 +355,7 @@ So when we run this code, we get:
 less than or equal to 3!
 ```
 
-This is because all the code inside the indented `if` statement is being run. 
+This is because all the code inside the indented `if` statement is being run.
 
 ### `elif`
 
@@ -375,7 +374,7 @@ a positive number
 ```
 This is because a is 2, so the initial `if` is False -- this code doesn't run. Then the `elif` statement checks to see whether a is greater than 0. Because this is True, it prints 'a positive number'.
 
-But, so far, this is working pretty much the same way as if we had used an `else` statement. We can see the difference, though, if we set a to 0 so that *neither* statement is True. 
+But, so far, this is working pretty much the same way as if we had used an `else` statement. We can see the difference, though, if we set a to 0 so that *neither* statement is True.
 
 ```python
 a = 0
@@ -401,7 +400,7 @@ If we assign season to be fall, then we get the output:
 ```console
 getting colder
 ```
-So, this very neatly tested several conditions for us. Great! 
+So, this very neatly tested several conditions for us. Great!
 
 Now, we *could* make the last one an else statement, and for this example it would do the same thing. However, it might also cause some problems. Let's say the season is 'winter', but we used a capital letter:
 
@@ -420,7 +419,7 @@ This still prints out:
 ```console
 getting colder
 ```
-This is because the code is doing everything we asked it to -- none of the first 3 conditions evaluate to `True`, so it prints out the message we meant for fall. 
+This is because the code is doing everything we asked it to -- none of the first 3 conditions evaluate to `True`, so it prints out the message we meant for fall.
 
 #### Multiple `if` statements
 
@@ -457,21 +456,21 @@ One useful thing is that we can 'nest' conditional logic, such that we can have 
 a = 10
 if a > 0:
     print('a is positive')
-    
+
     # a second level of nested logic
     if a > 10:
         print('a is greater than 10')
     else:
         print('a is not greater than 10')
-```       
+```
 When we run this code, we get:
 ```console
 a is positive
 a is not greater than 10
 ```
-This is because the first statement was true (a > 0), so python ran the second `if` statement to check whether it was greater than 10. 
+This is because the first statement was true (a > 0), so python ran the second `if` statement to check whether it was greater than 10.
 
-We won't spend a lot of time with nested conditions now, but this concept of 'nesting' is one that we'll come back to for several uses later on. 
+We won't spend a lot of time with nested conditions now, but this concept of 'nesting' is one that we'll come back to for several uses later on.
 
 ### Conditional statements with user input
 
@@ -509,42 +508,8 @@ else:
 
 Try running this in a script, and try giving the responses 'y', 'n', or something else, and see how the code responds.
 
-## 4. Using `assert()` to check things before your code continues
 
-In many cases, it helps to be able to ONLY run the rest of a python script in the case that a certain condition is true, and throw an error otherwise. We can do this by *putting a logical statement inside the `assert()` function
-
-To see this, let's modify the previous example to ONLY continue if the user answers 'y'
-
-```python
-
-# ask the user if they want to hear a joke
-answer = input("Do you want to hear a joke? (press y / n) ")
-
-# make sure the answer is 'y'. if not, throw an error
-assert(answer == 'y')
-
-print("I'm against picketing, but I don't know how to show it.")
-
-```
-
-So, if the answer isn't 'y', we see the output:
-
-```console:
-Do you want to hear a joke? (press y / n) ,
-Traceback (most recent call last):
-  File "logic_practice.py", line 3, in <module>
-    assert(answer == 'y')
-AssertionError
-
-```
-
-**Note:** this isn't necessarily an *error* on your part per se -- you put this `assert()` function here because you *INTENDED* for the script to stop running if the user did not input a 'y'
-
-
-You can find more info/examples of assertions [here](https://www.tutorialspoint.com/python/assertions_in_python.htm)
-
-
-Pretty cool right? Now we're starting to see how powerful python / coding can be for handling user input and starting to **automate** processes on the 'back end'. A lot of this type of logic is used for apps and websites that handle user interaction, using a combination of python and other languages. 
+Pretty cool right? Now we're starting to see how powerful python / coding can be for handling user input and starting to **automate** processes on the 'back end'. A lot of this type of logic is used for apps and websites that handle user interaction, using a combination of python and other languages.
 
 # Overview of what we learned today
 

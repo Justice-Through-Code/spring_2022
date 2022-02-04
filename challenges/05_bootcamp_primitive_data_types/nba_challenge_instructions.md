@@ -1,4 +1,4 @@
-# NBA Challenge: Storing and calculating 2020 NBA playoff statistics 
+# NBA Challenge: Storing and calculating 2020 NBA playoff statistics
 
 <img src="https://clutchpoints.com/wp-content/uploads/2020/04/nba-9.jpg" width="800">
 
@@ -7,23 +7,23 @@ In this challenge, we're giving you a script called `nba_challenge.py` that you'
 
 *To get started put `nba_challenge.py` in your personal folder inside your pod repo.*
 
-In the 2020 NBA playoffs, Jamal Murray, Fred VanVleet, and James Harden rank #1, #2, and #3 respectively for the number of 3-point shots made at 46, 43, and 37. 
+In the 2020 NBA playoffs, Jamal Murray, Fred VanVleet, and James Harden rank #1, #2, and #3 respectively for the number of 3-point shots made at 46, 43, and 37.
 
-## Challenge 2.1: Store the number of three point shots made in variables for each player 
+## Challenge 2.1: Store the number of three point shots made in variables for each player
 
-In the file `nba_challenge.py`, create variables to track the number of 3-point shots Fred VanVleet and James Harden have made. There already exists a variable for Jamal Murray.  
+In the file `nba_challenge.py`, create variables to track the number of 3-point shots Fred VanVleet and James Harden have made. There already exists a variable for Jamal Murray.
 
-### Challenge 2.2: Print out the number of three point shots using f-strings with the variables created for each player in 2.1 
+### Challenge 2.2: Print out the number of three point shots using f-strings with the variables created for each player in 2.1
 
-Note: Make sure to use the variables you created in Challenge 2.1 in the print statements! 
+Note: Make sure to use the variables you created in Challenge 2.1 in the print statements!
 
-#### Challenge 2.3: Store the number of three point shot attempts in variables for each player 
+#### Challenge 2.3: Store the number of three point shot attempts in variables for each player
 
-In the 2020 NBA playoffs, Jamal Murray, Fred VanVleet, and James Harden attempted 93, 110, 109 three point shots total. Create variables to store these values in `nba_challenge.py`, similar to what you did in Challenge 2.1. 
+In the 2020 NBA playoffs, Jamal Murray, Fred VanVleet, and James Harden attempted 93, 110, 109 three point shots total. Create variables to store these values in `nba_challenge.py`, similar to what you did in Challenge 2.1.
 
-### Challenge 2.4: Build on your print statement! 
+### Challenge 2.4: Build on your print statement!
 
-Copy the print statements you wrote in Challenge 2.2 and extend them by printing both the number of three point shots each player made as well as the number of three point shots each player attempted. Try to use only one `print()` statement for each player and remember that you can use 'f-strings' to insert variables into lines of text (reference the examples above if you forgot how to do this). 
+Copy the print statements you wrote in Challenge 2.2 and extend them by printing both the number of three point shots each player made as well as the number of three point shots each player attempted. Try to use only one `print()` statement for each player and remember that you can use 'f-strings' to insert variables into lines of text (reference the examples above if you forgot how to do this).
 
 ### Challenge 2.5: Calculate and print the three point percentage for each player
 
@@ -48,7 +48,7 @@ This is a HUGE chunk of text. Can you add **escape characters** to print out thi
 
 ### Challenge 3.4 Type conversion
 
-* Convert your `lakers_are_best` variable to an integer, and print it out. 
+* Convert your `lakers_are_best` variable to an integer, and print it out.
   * Why do you think it takes this value?
 * Convert your `lakers_are best` variable to a float, and print it out
 
@@ -60,7 +60,6 @@ This is a HUGE chunk of text. Can you add **escape characters** to print out thi
 
 ### Challenge 4: Pushing to your branch of your pod repo, and submit a pull request
 
-Same as previous challenges! Need a reminder? See [the git collab challenge here](https://github.com/Justice-Through-Code/spring_2021/blob/main/challenges/03_git_collab/03_git_collab.md#step-5-opening-a-pr-in-github)
-
+Same as previous challenges!
 
 **Congrats! You finished the NBA-themed primitive data types challenge!**

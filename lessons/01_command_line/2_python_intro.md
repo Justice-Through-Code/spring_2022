@@ -14,7 +14,7 @@ In some ways, Python works a lot like any other language you learn-- there's voc
 
 You've already seen `.txt` files in today's challenge, like `JFK.txt` and `LGA.txt`. `txt` stands for 'text', since these were 'text files'. Similarly, jpeg pictures use the `.jpeg` 'extension' to tell the computer that the file is a photo.
 
-To tell the computer that a file has python code in it, we use the `.py` extension. Let's create a new file called `hello_world.py`. There are a few different ways to do this, but for now, you can use the top menu to open a new file.
+To tell the computer that a file has python code in it, we use the `.py` extension. Let's create a new file called `first_program.py`. There are a few different ways to do this, but for now, you can use the top menu to open a new file.
 
 <img src="images/new_file.png" width="500">
 
@@ -28,6 +28,6 @@ Note, did the word 'print' change color? That's because it's a Python key word, 
 
 Save the file again. Now open up your terminal, either in `VScode` or otherwise, if you're on a Mac. Navigate to the folder that `hello_world.py` is saved in (hint: use `cd` to change directories, and `ls` to see what's in your working directory to see if you're in the right place).
 
-Type `python3 hello_world.py` in your terminal.
+Type `python3 first_program.py` in your terminal.
 
 Congratulations, you're a programmer!
