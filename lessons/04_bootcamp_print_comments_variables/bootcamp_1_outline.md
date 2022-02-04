@@ -140,3 +140,8 @@ So, what have we learned during this lesson?
 -   How to document code with comments that will not be run
 -   How to make variables, reference them by name, and assign/update/print their contents
 -   All of these skills will be super important for progamming in python, and most will carry over to other coding languages too!
+
+
+## Challenges
+
+In your pods, start with `first_python_challenge.py`. `nba_challenge.py` should also be completed for this class, though you may not finish (or start!) with your pod. There is also an extra challenge in the folder (`extra_temperature_challenge.py`), but this one is not required to be turned in! If you'd like more practice, feel free to finish it, but it will not be required for your grade.
