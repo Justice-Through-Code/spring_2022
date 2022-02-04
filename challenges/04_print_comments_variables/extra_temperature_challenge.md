@@ -1,9 +1,10 @@
-# Primitive Data Types Challenge 1: Converting temperatures
+# Extra Practice, not required!!
+# Converting temperatures
 
 <img src="https://storage.googleapis.com/ltkcms.appspot.com/fs/yd/images/cover/thermometer-in-snow.base?v=1591222156" width="650">
 
 ## Setup
-In your personal folder inside your pod git repo, make a script called `temperature.py` and run it using `python temperature.py` to verify you get the expected output.
+In your personal folder inside your pod git repo, make a script called `temperature.py` and run it using `python3 temperature.py` to verify you get the expected output.
 
 ### The formula for converting between fahrenheit and celsius is to first subtract 32, then multiply by 5/9. Can you do the following in python?
 
@@ -53,4 +54,4 @@ $ git push
 
 Now, go to your pod github repository and make sure the changes have been pushed correctly to your branch, then submit a pull request!
 
-**Congrats! You finished the python bootcamp day1 challenge!!**
+**Congrats, challenge complete!!**
