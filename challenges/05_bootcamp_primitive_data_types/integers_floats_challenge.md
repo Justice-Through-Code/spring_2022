@@ -3,7 +3,7 @@
 <img src="https://storage.googleapis.com/ltkcms.appspot.com/fs/yd/images/cover/thermometer-in-snow.base?v=1591222156" width="650">
 
 ## Setup
-In your personal folder inside your pod git repo, make a script called `temperature.py` and run it using `python temperature.py` to verify you get the expected output. 
+In your personal folder inside your pod git repo, make a script called `temperature.py` and run it using `python temperature.py` to verify you get the expected output.
 
 ### The formula for converting between fahrenheit and celsius is to first subtract 32, then multiply by 5/9. Can you do the following in python?
 
@@ -28,22 +28,27 @@ In your personal folder inside your pod git repo, make a script called `temperat
 
 ### Awesome job! Now, add, commit, and push your completed script to your pod Github repo on your branch, then submit a pull request
 
-**Note: make sure you push to your POD repo where the base version is maintained by your TA, not the general JTC repo where the base version is maintained by the `Justice Through Code` organization**
+Remember, you'll do this from the command line. First
 
-Remember, you'll do this from the command line. First add: 
+Make sure you're on your branch
+```console
+$ git checkout -b <your-branch-name>
+```
+
+Then add:
 ```console
 $ git add temperature.py
 ```
 
 Then commit to take a 'snapshot':
 ```console
-$ git commit -m 'adding temperature.py challenge'
+$ git commit -m 'add temperature.py challenge'
 ```
 
-Then push to the remote online on your branch!
+Then push to GitHub!
 
 ```console
-$ git push origin [your_branch_name]
+$ git push
 ```
 
 Now, go to your pod github repository and make sure the changes have been pushed correctly to your branch, then submit a pull request!
