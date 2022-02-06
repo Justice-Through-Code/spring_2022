@@ -1,4 +1,3 @@
-# Extra Practice, not required!!
 # Converting temperatures
 
 <img src="https://storage.googleapis.com/ltkcms.appspot.com/fs/yd/images/cover/thermometer-in-snow.base?v=1591222156" width="650">

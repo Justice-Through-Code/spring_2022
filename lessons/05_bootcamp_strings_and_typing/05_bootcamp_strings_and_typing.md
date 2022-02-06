@@ -388,6 +388,11 @@ Okay! So in this lesson we learned about
 **What's next?**
 Soon we'll be moving on to learning about *logic* in programming -- how to check if certain conditions are met or now, and how to use this to control which code runs, and how.
 
+
+## Challenges
+
+Today's challenge is `strings_challenge.py` in your pod repos. There is also an extra challenge in the folder (`nba_challenge_EXTRA.py`), but this one is not required to be turned in! If you'd like more practice, feel free to finish it, but it will not be required for your grade.
+
 ## Extras
 
 In python, there are special characters for things like new lines (like hitting `return` on your keyboard) (`'\n'`) and tabs (`'\t'`). Try them out!

@@ -461,6 +461,11 @@ So, what have we learned during this lesson?
 
 All of these skills will be super important for progamming in python, and most will carry over to other coding languages too!
 
+## Challenges
+
+In your pods, start with `first_python_challenge.py`. `temperature_challenge.py` should also be completed for this class, though you may not finish (or start!) with your pod. Have fun!
+
+
 ## Extras
 
 Python can do a lot more math than what we talked about in class! For instance, try googling the three different types of division: float division (`/`), integer division (`//`), and remainder division (`%`).
