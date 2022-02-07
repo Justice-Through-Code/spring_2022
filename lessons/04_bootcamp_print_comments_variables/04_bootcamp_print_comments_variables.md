@@ -5,7 +5,7 @@
 
 * Make sure you feel comfortable with using the command line
 * Make sure you feel comfortable pushing changes to your course folder to your course github repo
-* Make a folder called `bootcamp_scripts` inside the `class_scripts` folder in your `jtc_class_code` repository (your github repo)
+* Make a folder called `jtc_class_code` wherever you're keeping your JTC content
 
 # Outline of class agenda
 
@@ -29,7 +29,7 @@ One thing you might be wondering today as we start the bootcamp is: what exactly
 
 In coding terms, 'printing' means to **'print' to the screen**. This allows you to **display** what your code is doing. Printing is useful both to do some pretty cool things with, _and_ to debug your code when things go wrong.
 
-First, make a new file called `print_exercise.py` in your `bootcamp_scripts` folder. We'll use this script to get comfortable working with print statements. You can open this up in your text editor to get started.
+First, make a new file called `print_exercise.py` in your `jtc_class_code` folder. We'll use this script to get comfortable working with print statements. You can open this up in your text editor to get started.
 
 ### Printing text
 
@@ -39,7 +39,7 @@ To get started, let's print out some text just like we did with the `hello_world
 print('hi, this is your computer speaking')
 ```
 
-Now, run your script from the command line (make sure you've `cd`'d into your `bootcamp_scripts` folder) with:
+Now, run your script from the command line (make sure you've `cd`'d into your `jtc_class_code` folder) with:
 
 ```console
 $ python3 print_exercise.py
@@ -288,7 +288,7 @@ So far today we've worked with 3 different types of data: strings, integers, and
 Often you'll want to keep track of different pieces of data so that you can use them multiple times. When we want to save a piece of data to use later in our script, we can save it in a **variable**.
 
 
-To learn about variables, let's make a new script in the `bootcamp_scripts` folder called `variables.py`
+To learn about variables, let's make a new script in the `jtc_class_code` folder called `variables.py`
 
 #### What is a variable?
 
