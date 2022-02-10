@@ -4,7 +4,7 @@ There are 2 parts to this challenge:
 1. Debugging code snippets
 2. Playing with the stock market
 
-In this challenge, we are providing you 2 incomplete scripts - `snippets_challenge.py` and `stocks_challenge.py`. You will be working on these files to debug some code snippets and also perform some basic stock market calculations.
+In this challenge, we are providing you 2 incomplete scripts - `snippets_challenge.py` and `stocks_challenge.py`. You will be working on these files to debug some code snippets and also perform some stock market calculations.
 
 ## Challenge 3.1 - Debugging code snippets
 
@@ -12,11 +12,11 @@ In this challenge, we are providing you 2 incomplete scripts - `snippets_challen
 
 ### Overview of the challenge
 
-There are 5 code snippets in `snippets_challenge.py` here that throw errors or give incorrect outputs as of now. Based on the lecture, try to debug these code snippets so that the errors are resolved and we have the correct output. Snippets should be done in order. When a snippet is debugged, the program will run to the next snippet to debug. 
+There are 5 code snippets in `snippets_challenge.py` here that currently throw errors or give incorrect outputs. Based on the lecture, try to debug these code snippets so that the errors are resolved and we have the correct output. Snippets should be done in order. When a snippet is debugged, the program will run to the next snippet to debug.
 
-Pay attention to the types of errors displayed in the terminal. 
+Pay attention to the types of errors displayed in the terminal.
 * Syntax errors means the program cannot run.
-* `AssertionError` means there is a logical error in the code caused by `assert()`. 
+* `AssertionError` means there is a logical error in the code caused by `assert()`.
 * `assert()` is a way to test if a condition in your code returns `True`.
 
 The last line `print("CHALLENGE COMPLETED!")` will run when all the errors have been debugged.

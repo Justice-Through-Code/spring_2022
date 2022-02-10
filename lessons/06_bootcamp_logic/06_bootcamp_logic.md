@@ -4,7 +4,7 @@
 
 # Before class
 
-* Make sure you feel comfortable with all 4 primitive data types (integers, strings, floats, and booleans)
+* Make sure you're familiar with all 4 primitive data types (integers, strings, floats, and booleans)
 * Refresh yourself on how to *convert* between the four basic data types
 * Refresh yourself on how to *determine what type* a variable is
 
@@ -13,7 +13,7 @@
 Today we'll learn about **logic** in python. By the end of the lesson, you'll:
 
 1. Understand what [**logical operators are**](https://realpython.com/python-operators-expressions/) and feel comfortable using them to test whether conditions are true or not
-    * Get comfortable with using both single equals signs (`=`) and double equals signs (`==`)
+    * Get comfortable with using double equals signs (`==`)
     * Use `True`/`False` logic with all primitive data types
 2. Combine logical operations into compound statements with `and`, `or`, and `not`
 3. Feel comfortable with [**conditional statements**](https://realpython.com/python-conditional-statements/), and be able to use them to control how code runs
