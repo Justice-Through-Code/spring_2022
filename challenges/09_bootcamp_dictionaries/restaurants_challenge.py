@@ -5,11 +5,11 @@ print()
 print("Question 1")
 
 '''
-Below is a dictionary consisting of details of 1 restaurant fetched from Yelp. 
+Below is a dictionary consisting of details of 1 restaurant fetched from Yelp.
 
-Go through the dictionary and print out the following 3 pieces of information about the restaurant: 
-1. The latitude and longitude of Four Barrel Coffee 
-2. The complete address of Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code. 
+Go through the dictionary and print out the following 3 pieces of information about the restaurant:
+1. The latitude and longitude of Four Barrel Coffee
+2. The complete address of Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
 3. The website of Four Barrel Coffee
 '''
 
@@ -54,14 +54,15 @@ print("Question 2")
 restaurant_1  = {
     "name": "Subway",
     "address" : "116th & Broadway, NY 10016",
-    "favourite_dish" : "Chicken BLT Sandwich" }
+    "favourite_dish" : "Chicken BLT Sandwich"
+}
 '''
 
 print()
 
 print("Question 3")
 '''
-Imagine that any 1 of your most favourite restaurants stopped serving your favourite dish there. 
+Imagine that any 1 of your most favourite restaurants stopped serving your favourite dish there.
 Remove the 'favourite_dish' key value pair from that restaurant's dictionary
 '''
 
@@ -72,12 +73,21 @@ print()
 
 print("Question 4")
 '''
-Imagine that another one of your most favourite restaurants modified its address. 
+Imagine that another one of your most favourite restaurants modified its address.
 Update just this value in that restaurant's dictionary
 '''
 
-# TODO: Update the address field of 1 restaurant 
+# TODO: Update the address field of 1 restaurant
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
 # TODO: Print the updated dictionary.
 
 print()
+
+
+print("Question 5")
+'''
+Printing out all 3 of our restaurants every time is getting annoying. Let's clean up our code!
+'''
+
+# TODO: Put your 3 restaurant dictionaries into a list called `restaurants`
+# TODO: Loop through your list and print out the name and address of each restaurant
