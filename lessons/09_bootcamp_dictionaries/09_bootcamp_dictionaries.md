@@ -14,7 +14,7 @@ Today we'll learn about [**dictionaries**](https://www.python-course.eu/dictiona
 1. Feel comfortable using dictionaries in python to store multiple pieces of data (using any of the 4 primitive data types, and lists)
 2. Know how to add, remove, and updating data in dictionaries
 3. Understand the key differences between lists and dictionaries, especially in terms of:
-    * Labels (lists do not have, dictionaries do)
+    * Labels (dictionaries have them instead of indexes, lists have indexes)
     * Order (lists have, dictionaries do not)
 
 # What is a dictionary?
@@ -22,7 +22,7 @@ Today we'll learn about [**dictionaries**](https://www.python-course.eu/dictiona
 We can think of **dictionary** in python through using the metaphor of a physical dictionary.
 * In a physical dictionary, we look up a word, and then get information about that word (the definition, pronunciation, etc).
 * A dictionary in python is very similar in that each part of the dictionary has a **key** (i.e. the word), and a corresponding **value** (i.e. the definition). All data in a dictionary is made up of these [**key-value pairs**](https://www.geeksforgeeks.org/add-a-keyvalue-pair-to-dictionary-in-python/#:~:text=Dictionary%20in%20Python%20is%20an,key%2Fvalue%20inside%20the%20dictionary.).
-    * Another way of thinking about this is that every piece of data in a dictionary has a **label** (i.e. the key). This is unlike lists, where each element does not have a label
+    * Another way of thinking about this is that every piece of data in a dictionary has a **label** (i.e. the key). This is unlike lists, where each element has an _index_ instead.
 * Unlike lists, **dictionaries do not have order in python**
 * We can also edit dictionaries to change what is in them (i.e. they are 'mutable')
 * Just like with primitive data types in python, we can assign and update dictionaries using **variables**
@@ -97,7 +97,7 @@ When we run this code, we get:
 
 ### Retrieving data from a dictionary
 
-If we want to pull out a specific value from the dictionary, we reference it by it's key. So, if I want to get just the `balance` variable from `user_account`, I can run:
+If we want to pull out a specific value from the dictionary, we reference it by it's key. So, if I want to get just the value of `programmer` from `word_dictionary`, I can run:
 
 ```python
 word_dictionary = {
@@ -118,7 +118,7 @@ It's similar to indexing into a list-- if you print something like `my_list[0]`,
 
 Every time we want a **specific value** from a dictionary like this, we use this syntax -- the name of the dictionary, followed by hard brackets with the string name of the **key** (in quotes) inside.
 
-As another example, if we wanted to get just the bow definition, we could run:
+As another example, if we wanted to get just the 'bow' definition, we could run:
 
 ```python
 bow_definitions = word_dictionary['bow']
