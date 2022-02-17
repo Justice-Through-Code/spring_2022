@@ -9,7 +9,8 @@ The expectations for your finished project are:
 3. Your tip calculator must *be interactive and take user input* at the command line. This means that your python code must respond appropriately based on what the user enters.
 4. Your code must be well-commented. Demonstrate how much you understand!
 5. After a tip has been calculated, your program should ask the user if they would like to enter another tip, and run again if the answer is yes.
-6. This project is an *individual* one! You can talk to your classmates for ideas, but all code should be your own.
+6. Your code should be split into functions, logically broken up and well named. (It's recommended that you do this part last, after you get it running!)
+7. This project is an *individual* one! You can talk to your classmates for ideas, but all code should be your own.
 
 *Feeling stuck?*
 *   You can always reference the [course Github repo](https://github.com/Justice-Through-Code/fall_2021) and use any lessons or challenges there to guide you
