@@ -30,6 +30,7 @@ Then, the script should output:
 * The total bill (including tip)
 * how much each person should pay (you can assume all people will split the bill evenly)
 
+Assume there is a 10% sales tax. Don't forget to add this into the total bill (although this shouldn't be included in calculating the tip itself)!
 
 **Note:** your tip calculator should be able to handle a bill of any amount of many money, with any number of people splitting the bill, and with any tip percentage (including 0% tip)
 
