@@ -6,270 +6,323 @@
 
 ## Outline of class agenda
 
+- What is an object?
 - Objected Oriented Programming versus Procedural Programming
 - How to write Python classes to create objects
 - Adding more functionality to objects
- 
+
 
 # Procedural Programming
 
-### So far...
-We've been writing code in the style of **Procedural Programming**, i.e. we take blocks of logic and put them inside functions to manipulate data:
+We've talked a little bit about how depending on what job you're doing in the future, you might be coding differently. The scripts that are required for [Dev Ops](https://searchitoperations.techtarget.com/definition/DevOps) and [Site Reliability Engineering](https://www.redhat.com/en/topics/devops/what-is-sre) work require a different way of thinking than backend software engineering, which requires a different way of thinking from frontend software engineering, etc etc.
 
+It might surprise you to learn, however, that these differences go beyond particulars of the job-- there are actually multiple methods, or 'paradigms', of coding.
+
+So far, we've been writing code in the style of **Procedural Programming**, i.e. there are steps that we tell our code to do, or _procedures_, in which we write chunks of logic that sometimes edit or manipulate data.
+
+Now not to worry, we won't ever really stop doing this type of coding. Python in particular can blend a variety of different coding paradigms, to use the best of each and ignore the worst. This flexibility is part of what makes python so versatile, but it can also make the rules a little blurry. So let's talk about what exactly our next coding paradigm is.
+
+Let's go back to our restaurant example. Say we're tracking restaurant data to put on Google, and we've been keeping it in dictionaries. We know that we need the same information for each restaurant, something like this:
 
 ```python
-ash = {
-    'name': 'Ash',
-    'bio': 'Software Developer in NYC',
-    'tweets': []
+# Restaurant 'blueprint'
+restaurant = {
+    'name': '',
+    'addresses': [],
+    'menu_url': '',
+    'hours': {
+        'Sunday': [0, 0],
+        'Monday': [0, 0],
+        'Tuesday': [0, 0],
+        'Wednesday': [0, 0],
+        'Thursday': [0, 0],
+        'Friday': [0, 0],
+        'Saturday': [0, 0],
+    }
+}
+```
+
+Each restaurant will need to have a name, at least one address, hopefully a menu url, and hours of operation (the hours of operation could be tracked numerous different ways, here we went with a list of two integers: the hour of opening and the hour of closing, in military time).
+
+Every restaurant object we make should have all of this data filled in. But we may not have all of the info for a give restaurant when we create its dictionary.
+
+Let's make a new restaurant object called islands, where all we know is the name (Islands), and the rest of the data is still the defaults from above--
+
+```python
+islands = {
+    'name': 'Islands',
+    'addresses': [],
+    'menu_url': '',
+    'hours': {
+        'Sunday': [0, 0],
+        'Monday': [0, 0],
+        'Tuesday': [0, 0],
+        'Wednesday': [0, 0],
+        'Thursday': [0, 0],
+        'Friday': [0, 0],
+        'Saturday': [0, 0],
+    }
+}
+```
+
+And now let's create some functions that we might use to go into our restaurant object and update it.
+
+Some functionality that comes to mind that we might need are things like
+
+a) Updating the hours of operation for a given day
+b) Checking if the restaurant is open at a given time on a given day
+
+So let's write functions that can do that for us. Let's start at the top.
+
+What information will will we need in order to update the hours of operation for a specific day at a restaurant?
+
+Firstly, we'll need the restaurant object, the dictionary, to update.
+Second, we'll need to know which day we're updating.
+Lastly, we'll need the new opening and closing times for that day.
+
+^ Those are the _parameters_ our function will need. So:
+
+```python
+def update_hours(restaurant_object, day, opening, closing):
+    hours_for_day = restaurant_object['hours'][day]
+    hours_for_day[0] = opening
+    hours_for_day[1] = closing
+```
+
+Let's check our work.
+
+```python
+islands = {
+    'name': 'Islands',
+    'addresses': [],
+    'menu_url': '',
+    'hours': {
+        'Sunday': [0, 0],
+        'Monday': [0, 0],
+        'Tuesday': [0, 0],
+        'Wednesday': [0, 0],
+        'Thursday': [0, 0],
+        'Friday': [0, 0],
+        'Saturday': [0, 0],
+    }
 }
 
-def add_tweet(user, text):
-        user['tweets'].append(text)
-        
 
-add_tweet(ash, 'Today was the longest day of the summer.')
+def update_hours(restaurant_object, day, opening, closing):
+    hours_for_day = restaurant_object['hours'][day]
+    hours_for_day[0] = opening
+    hours_for_day[1] = closing
 
-print(ash['tweets'][0])
+
+# Use military time to avoid confusion
+update_hours(islands, 'Wednesday', 8, 17)
+
+print(islands['hours'])
 ```
 
-If want to add more users our code would look like this:
-
-
-```python
-ash = {
-    'name': 'Ash',
-    'bio': 'Software Developer in NYC',
-    'tweets': []
-}
-
-def add_tweet(user, text):
-        user['tweets'].append(text)
-        
-
-add_tweet(ash, 'Today was the longest day of the summer.')
-
-print(ash['name'])
-print(ash['bio'])
-print(ash['tweets'][0])
-
-paul = {
-    'name': 'Paul',
-    'bio': 'PhD student at Columbia University',
-    'tweets': []
-}
-
-add_tweet(paul, 'Cambridge looks great during fall!')
-
-print(paul['name'])
-print(paul['bio'])
-print(paul['tweets'][0])
+```console
+{'Sunday': [0, 0], 'Monday': [0, 0], 'Tuesday': [0, 0], 'Wednesday': [8, 17], 'Thursday': [0, 0], 'Friday': [0, 0], 'Saturday': [0, 0]}
 ```
 
-We have seen versions of this code before like the music playlist challenges. However, there are other styles of programming! Here's the same code but applying concepts of **Objected Oriented Programming**:
+Our Wednesday hours have successfully been updated! Great! Let's move onto the next function.
 
+b) Checking if the restaurant is open at a given time on a given day
+
+What information will our second function need in order for us to answer this question?
+
+Again, we will need the restaurant object to check for operating hours. Again, we'll need to know which day we're talking about. And this time, we'll need to know which hour it is that we're checking. So for example, say we want to check if Islands is open at 7am on Wednesdays. And then we also want to check if it's open at noon. Let's write our function.
 
 ```python
-class TwitterUser():
-    def __init__(self, name, bio):
-        self.name = name
-        self.bio = bio
-        self.tweets = []
-        
-    def add_tweet(self, text):
-        self.tweets.append(text)
-        
-ash = TwitterUser('Ash', 'Software Developer in NYC')
-ash.add_tweet('Today was the longest day of the summer.')
+def is_open(restaurant_object, day, time):
+    hours_for_day = restaurant_object['hours'][day]
 
-paul = TwitterUser('Paul', 'PhD student at Columbia University')
-paul.add_tweet('Cambridge looks great during fall!')
-
-print(ash.name)
-print(ash.bio)
-print(ash.tweets[0])
-print(paul.name)
-print(paul.bio)
-print(paul.tweets[0])
+    # Fancy python functionality-- check if the time is between the opening and closing hours
+    return hours_for_day[0] < time < hours_for_day[1]
 ```
 
-The key changes in how we code here are the following lines:
-
+That's it! Let's check it.
 
 ```python
-ash = TwitterUser('Ash', 'Software Developer in NYC')
-ash.add_tweet('Today was the longest day of the summer.')
+print(is_open(islands, 'Wednesday', 7))
+print(is_open(islands, 'Wednesday', 12))
 ```
 
-The creation of a user is simpler and the `add_tweet` function is now tied to that user (similar to functions we learned that are attached by the dot notation to data type like `list.append()` or `str.capitalize()`
-
-# Objected Oriented Programming
-
-Before we dig deeper into the syntax, here's the key idea behind OOP: 
-- We combine data (name, bio, tweets) and functionality (add_tweet) and wrap it inside something called an **object**. The user `ash` and `paul` are now objects. 
-- Objects are created from a blueprint (TwitterUser) called a **class** that dictates data and functionality the objects would contain
-- When you're writing large programs or have a problem that is better suited to this method, you can use object oriented programming technique
-
-## Creating a class
-
-
-```python
-class Person():
-    pass
+```console
+False
+True
 ```
 
-## Adding an attribute
+Got it! So let's take a look at all of our code thus far. We have a standard set of information that we want to track for every single restaurant, those are the attributes that every restaurant shares (they all have names, addresses, hours of operation, etc). And then we have these functions that all operate on a restaurant object. So what that's telling me looking at this code, is that we have the perfect opportunity to use Object Oriented Programming. Let's turn our restaurant dictionary into a `Restaurant` object.
 
+...How do?
+
+## Syntax time!
+
+Remember when we were first talking about data types, and we printed out what `type` of object our integer was?
 
 ```python
-class Person():
+print(type(9))
+```
+
+and we got back
+
+```console
+<class 'int'>
+```
+
+And we basically said to ignore the word 'class'. No longer! `int` is a type of `class` because `class` is python's key word to build a new type of object. So what does that look like for us?
+
+```python
+class Restaurant:
+    """An object to track data about Restaurants"""
+```
+
+All of the classes (aka objects) that we create should start with a capital letter, to keep with convention.
+
+But we're not done-- remember, we have our 'blueprint' of what should go _in_ each Restaurant object that we create.
+
+Every `class` needs a 'constructor' function, to tell Python what data the `class` is expected to have. The 'constructor' function in python has a special name that is used for every class: `def __init__`. 'init' is short for initialize, because this function initializes each of our restaurant objects. What that means is that whenever we create a `Restaurant` object, this function _always runs_. That's why our defaults go in it.
+
+The double underscores on each side of the word are some 'magic' python syntactical 'sugar', as it's called. The underscores are doing something behind the scenes that we're not going to get into in this class, but it is a google away if you want to look into it.
+
+So what does our constructor take in? For our purposes, all we need to know when we create a restaurant is its name. So what will our constructor look like?
+
+```python
+class Restaurant:
+    """An object to track data about Restaurants"""
+
     def __init__(self, name):
-        pass
 ```
 
-`def __init__(self):` is an initialization function. This is where we setup **attributes**. We can think of attributes as key/value pairs of a dictionary. 
+What is `self`? If we look back at our functional code, each function we wrote to manipulate restaurant data had to take in the `restaurant_object` it was updating. The same is true in our class. And the convention of what we call that object inside of the class, is `self`. This will make more sense honestly in like 6 months, it just takes practice.
 
+So once we have our parameters, what do we do with them? We set our defaults.
 
 ```python
-class Person():
+class Restaurant:
+    """An object to track data about Restaurants"""
+
     def __init__(self, name):
+        """Initialize a Restaurant object with a name and default hours of operation"""
         self.name = name
+
+        # Set defaults
+        self.hours = {
+            'Sunday': [0, 0],
+            'Monday': [0, 0],
+            'Tuesday': [0, 0],
+            'Wednesday': [0, 0],
+            'Thursday': [0, 0],
+            'Friday': [0, 0],
+            'Saturday': [0, 0],
+        }
+        self.addresses = []
+        self.menu_url = ''
 ```
 
-`self` refers to the object that will be created from the class blueprint. This object creation is also called instantiating a class. `self.name` will be assigned a name during instantiation.
+Every variable that we want our class to have access to needs to use `self.`. Try to think about it like this-- if the restaurant we're creating is `islands`, we want to keep track of `islands.name`. Inside the class, `self` is `islands`. Again, this will make more sense the more we practice it.
 
-## Instantiating a class or creating an object from a class
+These `self.` variables are called 'attributes' of our class. Because that's what they are-- every restaurant has a name, and hours of operation, that are attributes of that restaurant.
 
+Let's recreate our islands object as a `Restaurant`.
 
 ```python
-# name gets assigned to self.name
-person = Person('Mattan')
-# person.name now contains 'Mattan'
-print(person.name)
+islands = Restaurant('Islands')
 
-# name gets assigned to self.name
-person_2 = Person('Yusuf')
-# person_2.name now contains 'Yusuf'
-print(person_2.name)
+print(islands.name)
+print(islands.addresses)
+print(islands.hours)
 ```
 
-## Adding a method or a function to a class
-
+Boom. Now that we're using a class, all we need is _one line_, `islands = Restaurant('Islands')`, and python knows that all of the attributes in our blue print exist for our restaurant. We don't need to copy-paste the whole dictionary every time we want to create a new restaurant. We just write _one line_, and we're set. In fact, let's create a second restaurant to compare.
 
 ```python
-class Person():
-  def __init__(self, name):
-    self.name = name
-  
-  # greeting function is a method of Person class
-  def greeting(self):
-    return f'Hello, my name is {self.name}'
-    
-person = Person('Mattan')
+islands = Restaurant('Islands')
+spudz = Restaurant('Spudz')
 
-print(person.greeting()) # 'Hello, my name is Mattan'
+print(islands.name)
+print(islands.addresses)
+print(islands.hours)
+
+print()
+
+print(spudz.name)
+print(spudz.addresses)
+print(spudz.hours)
 ```
 
-## Checking types
+So fresh. So clean.
 
+And now, for the thing we've been talking about since week 2. We have these functions that update our restaurant dictionaries. but we don't want to be able to send those functions any dictionary of data. We _only_ want them to be run on a restaurant object. So let's move them onto our `Restaurant` class, making them **methods**. Take a look--
 
 ```python
-print(person)
-print(type(person))
-print(type(person) == Person)
+class Restaurant:
+    """An object to track data about Restaurants"""
+
+    def __init__(self, name):
+        """Initialize a Restaurant object with a name and default hours of operation"""
+        self.name = name
+
+        # Set defaults
+        self.hours = {
+            'Sunday': [0, 0],
+            'Monday': [0, 0],
+            'Tuesday': [0, 0],
+            'Wednesday': [0, 0],
+            'Thursday': [0, 0],
+            'Friday': [0, 0],
+            'Saturday': [0, 0],
+        }
+        self.addresses = []
+        self.menu_url = ''
+
+    def update_hours(self, day, opening, closing):
+        hours_for_day = self.hours[day]  # No more nested indexing
+        hours_for_day[0] = opening
+        hours_for_day[1] = closing
+
+    def is_open(self, day, time):
+        hours_for_day = self.hours[day]
+
+        # Fancy python functionality-- check if the time is between the opening and closing hours
+        return hours_for_day[0] < time < hours_for_day[1]
 ```
 
-## Updating Person class
-Let's add an additional detail in the greeting output:
-
+It's pretty similar! But now, we match the constructor method and call the restaurant object `self`, and some things get cleaned up. But the real fanciness here is that our **class methods** cannot be called on any objects other than `Restaurants`. Just like
 
 ```python
-print(person.greeting()) # 'Hello, my name is Mattan and I am 28 years old'
+print('asdfashdouha'.upper())
 ```
 
-**Implementation**
-
+`upper()` can only be called on a string, because it is a _method_ of the _string class_. `is_open` and `update_hours` are now methods of the `Restaurant` class. Let's see them in action:
 
 ```python
-class Person():
-    def __init__(self, name, age):
-        self.name = str(name)
-        self.age = int(age)
-    
-    def greeting(self):
-        return f'Hello, my name is {self.name} and I am {self.age} years old'
-    
-person = Person('Mattan', 28)
+islands = Restaurant('Islands')
+spudz = Restaurant('Spudz')
 
-print(person.greeting()) # 'Hello, my name is Mattan and I am 28 years old'
+islands.update_hours('Sunday', 8, 17)
+print(islands.hours)
+print()
+print(f'{islands.name} is open at 9 on Sunday: {islands.is_open("Sunday", 9)}')
+print(f'{islands.name} is open at 19 on Sunday: {islands.is_open("Sunday", 19)}')
 ```
 
-## Let's dive deeper with other data types
+```console
+{'Sunday': [8, 17], 'Monday': [0, 0], 'Tuesday': [0, 0], 'Wednesday': [0, 0], 'Thursday': [0, 0], 'Friday': [0, 0], 'Saturday': [0, 0]}
 
-
-
-```python
-class Cart():
-    def __init__(self):
-        self.items = []
-  
-    def add(self, name, price):
-        item = {}
-        item['name'] = name
-        item['price'] = price
-        self.items.append(item)
-    
-cart = Cart()
-
-# add a few items
-cart.add('oreos', 12)
-cart.add('bananas', 2)
-
-print(cart.items) # [{'name': 'oreos', 'price': 12}, {'name': 'bananas', 'price': 2}]
+Islands is open at 9 on Sunday: True
+Islands is open at 19 on Sunday: False
 ```
 
-## Adding more functionality
+You'll notice that we don't actually send the restaurant object to our methods. We don't send `.upper()` the string as a parameter, either. This is more behind the scenes magic that python is doing, that can be confusing at the start. But it's syntax that you've been using this whole time with string, list, and dictionary methods etc.
 
-Let's create a method `total` that returns the total of all items added to Cart including a `$` before it:
+Your classes can have as many attributes and methods as you want, just remember that the more complicated it is to read, the more complicated it is to use.
 
-
-```python
-cart.add('oreos', 12)
-cart.add('bananas', 2)
-print(cart.total()) # $14
-```
-
-
-```python
-class Cart():
-    def __init__(self):
-        self.items = []
-  
-    def add(self, name, price):
-        item = {}
-        item['name'] = name
-        item['price'] = price
-        self.items.append(item)
-        
-    # total function goes here
-    def total(self):
-        cart_total = 0
-        # self.items allows us to access the items list local to the object
-        for item in self.items:
-            cart_total += item['price']
-        return f'${cart_total}'
-    
-cart = Cart()
-cart.add('oreos', 12)
-cart.add('bananas', 2)
-
-print(cart.total())
-```
+This is a big conceptual jump from what we've been doing thus far. It's gonna take a while to process, and a lot (a LOT) of practice! Keep working on it and you'll get the hang of it, and then one day it'll really click into place. Until then, welcome to OOP!
 
 # Final thoughts
 
 - It is a common pattern seen in Python and other languages to organize complex projects
-- This will also be instrumental in understanding `pandas` and other Python libraries
 - Beside procedural and objected oriented programming, there's one more style of coding called functional. We won't be covering it in this course, but it is definitely worth exploring.
 
 # Other Resources
@@ -277,8 +330,3 @@ print(cart.total())
 - https://docs.python.org/3/tutorial/classes.html
 - https://realpython.com/python3-object-oriented-programming
 - https://www.w3schools.com/python/python_classes.asp
-
-
-```python
-
-```
