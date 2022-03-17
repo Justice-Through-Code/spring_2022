@@ -26,6 +26,10 @@ Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
 
+my_library = Booklist()
+print(my_library.books)
+print(type(my_library))
+
 
 '''
 Part #2:
@@ -33,7 +37,7 @@ In book_list_class.py:
 Define the add() method to add a book to an object of class Booklist
 -The method should take 2 parameters other than self, both strings -- 'title', and 'author'
 -The method should create a Book object (it's already imported into the file) with those two attributes
--Then, the method should append this book to books attribute of the the Booklist object  - i.e. self.books.append(book)
+-Then, the method should append this book to the books attribute of the the Booklist object  - i.e. self.books.append(book)
 
 In this script:
 Once you have finished the method, add the following books to your library:
@@ -45,6 +49,20 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
+
+my_library.add('Just Mercy', 'Bryan Stevenson')
+my_library.add("The New Jim Crow", 'Michelle Alexander')
+my_library.add("The Truths We Hold", 'Kamala Harris')
+my_library.add("My Grandmother's Hands", 'Resmaa Menakem')
+
+
+# print(my_library.books)
+
+for book in my_library.books:
+    print(book.title, book.author)
+
+# print([book.title for book in my_library.books])
+
 
 
 
@@ -80,12 +98,10 @@ print('\nPart 4\n')
 
 '''
 Part #5:
-In book_list_class.py:
+In this script:
 Instantiate another object of class Booklist called nyt_bestsellers
 Then, add 2 books of your choice from the New York Times best sellers lists to nyt_bestsellers using the .add() method
 You can find NYT books here: https://www.nytimes.com/books/best-sellers/
-
-In this script:
 Then, print out the books attribute of nyt_bestsellers
 '''
 
