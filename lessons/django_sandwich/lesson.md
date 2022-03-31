@@ -114,10 +114,13 @@ Before we get started, let's review the page:
 
 ```python
 from django.urls import path
+from your_app_name.views import SandwichView, IngredientsView, SandwichGeneratorView
 
 urlpatterns = [
     # sandwich/
-    path('')
+    path('', SandwichView.as_view(), name='sandwich'),
+    path('ingredients/<str:ingredient_type>', IngredientsView.as_view(), name='ingredients_list),
+    path('random', SandwichGeneratorView.as_view(), name='sandwich_generator')
 ]
 ```
 
@@ -127,10 +130,20 @@ urlpatterns = [
 
 ```python
 from django.shortcuts import render
+from django.http import Http404
+from django.views import View
+import random
 
-def sandwich(request):
-    if request.method == 'GET':
-        return render(request=request, template_name='sandwich.html')
+
+class SandwichappView(View):
+    def get(self, request):
+        if request.method == 'GET':
+            return render(
+                request = request,
+                template_name = 'sandwichapp.html',
+                context = {'ingredients': ingredients.keys()}
+            )
+
 ```
 
 Now that we've created a view, let's add it to our URL:
@@ -139,23 +152,30 @@ Now that we've created a view, let's add it to our URL:
 
 ```python
 from django.urls import path
-from . import views
+from <your_app_name>.views import SandwichappView
 
 urlpatterns = [
     # sandwich/
-    path('', views.sandwich, name='sandwich')
+    path('', SandwichappView.as_view(), name='sandwich'),
 ]
 ```
 
-Since we want the sandwich homepage to have hyperlinks to ingredients, let's create our ingredients data:
+Since we want the sandwich homepage to have hyperlinks to ingredients, let's create our ingredients data by creating our IngredientsView class in views.py:
 
 ```python
-from django.shortcuts import render
 
-def sandwich(request):
-    if request.method == 'GET':
-        ingredients = ['meats', 'cheeses', 'toppings']
-        return render(request = request, template_name = 'sandwich.html', context={ 'ingredients': ingredients })
+class IngredientsListView(View):
+    def get(self, request, ingredient_type):
+        if request.method == 'GET':
+            if ingredient_type not in ingredients:
+                raise Http404(f'No such ingredient: {ingredient_type}')
+
+            return render(
+                request = request,
+                template_name = 'ingredients_list.html',
+                context={ 'ingredients': ingredients[ingredient_type],
+                            'ingredient_type': ingredient_type }
+            )
 ```
 
 ## Create template
@@ -216,7 +236,7 @@ urlpatterns = [
     # sandwich/
     path('', views.sandwich, name='sandwich'),
     # sandwich/ingredients/<str:ingredient_type>
-    path('ingredients/<str:ingredient_type>')
+    path('ingredients/<str:ingredient_type>', IngredientsListView.as_view(), name='ingredients_list'),
 ]
 ```
 
@@ -231,18 +251,32 @@ urlpatterns = [
 from django.shortcuts import render
 
 ingredients = {
-    'meats':  ['ham', 'salami', 'turkey', 'chicken', 'meatball', 'tempeh'],
-    'cheeses': ['cheddar', 'provolone', 'swiss', 'american', 'gruyere'],
-    'toppings': ['lettuce', 'tomato', 'pickles', 'onions', 'peppers']
+    'meats': ['corned beef', 'pastrami', 'honey turkey', 'pepper steak', 'veggie burger'],
+    'cheeses': ['american', 'swiss', 'provolone', 'cheddar', 'mozzarella'],
+    'toppings': ['lettuce', 'tomato', 'onions', 'peppers', 'pickles']
 }
 
-def sandwich(request):
-    if request.method == 'GET':
-        return render(request, 'sandwich.html', context={ 'ingredients': ingredients.keys() })
 
-def ingredients_list(request, ingredient_type):
-    if request.method == 'GET':
-        return render(request, 'ingredients_list.html', context={ 'ingredients': ingredients[ingredient_type], 'ingredient_type': ingredient_type })
+class SandwichappView(View):
+    def get(self, request):
+        if request.method == 'GET':
+            return render(
+                request = request,
+                template_name = 'sandwichapp.html',
+                context = {'ingredients': ingredients.keys()}
+            )
+
+
+class IngredientsListView(View):
+    def get(self, request, ingredient_type):
+        if request.method == 'GET':
+            return render(
+                request = request,
+                template_name = 'ingredients_list.html',
+                context={ 'ingredients': ingredients[ingredient_type],
+                            'ingredient_type': ingredient_type }
+            )
+
 ```
 
 Now that we've created a view, let's add it to our URL:
@@ -251,13 +285,12 @@ Now that we've created a view, let's add it to our URL:
 
 ```python
 from django.urls import path
-from . import views
+from sandwichapp.views import SandwichappView, IngredientsListView
 
 urlpatterns = [
     # sandwich/
-    path('', views.sandwich, name='sandwich'),
-    # sandwich/ingredients/<str:ingredient_type>
-    path('ingredients/<str:ingredient_type>', views.ingredients_list, name='ingredients_list')
+    path('', SandwichappView.as_view(), name='sandwich'),
+    path('ingredients/<str:ingredient_type>', IngredientsListView.as_view(), name='ingredients_list'),
 ]
 ```
 
@@ -299,13 +332,19 @@ from django.http import Http404
 Raise `Http404` if `ingredient_type` passed does not exist:
 
 ```python
-def ingredients_list(request, ingredient_type):
-    if request.method == 'GET':
 
-        if ingredient_type not in ingredients:
-            raise Http404(f'No such ingredient: {ingredient_type}')
+class IngredientsListView(View):
+    def get(self, request, ingredient_type):
+        if request.method == 'GET':
+            if ingredient_type not in ingredients:
+                raise Http404(f'No such ingredient: {ingredient_type}')
 
-        return render(request, 'ingredients_list.html', context={ 'ingredients': ingredients[ingredient_type], 'ingredient_type': ingredient_type })
+            return render(
+                request = request,
+                template_name = 'ingredients_list.html',
+                context={ 'ingredients': ingredients[ingredient_type],
+                            'ingredient_type': ingredient_type }
+            )
 ```
 
 ## Let's test it out!
@@ -327,16 +366,13 @@ Before we get started, let's review the page:
 
 ```python
 from django.urls import path
-
-from . import views
+from sandwichapp.views import SandwichappView, IngredientsListView, SandwichGeneratorView
 
 urlpatterns = [
     # sandwich/
-    path('', views.sandwich, name='sandwich'),
-    # sandwich/ingredients/<str:ingredient_type>
-    path('ingredients/<str:ingredient_type>', views.ingredients_list, name='ingredients_list'),
-    # sandwich/random
-    path('random')
+    path('', SandwichappView.as_view(), name='sandwich'),
+    path('ingredients/<str:ingredient_type>', IngredientsListView.as_view(), name='ingredients_list'),
+    path('random', SandwichGeneratorView.as_view(), name='sandwich_generator')
 ]
 ```
 
@@ -345,36 +381,38 @@ urlpatterns = [
 To randomize our selections of meats, cheeses and toppings, let's import `random`:
 
 ```python
+from django.shortcuts import render
+from django.http import Http404
+from django.views import View
 import random
 ```
 
 ```python
-def sandwich_generator(request):
-    if request.method == 'GET':
-        """ Build a random cold-cut sandwich """
-        selected_meat = random.choice(ingredients['meats'])
-        selected_cheese = random.choice(ingredients['cheeses'])
-        selected_topping = random.choice(ingredients['toppings'])
 
-        sandwich = f'{selected_meat} & {selected_cheese} with {selected_topping}'
-        return render(request, 'sandwich_generator.html', context={ 'sandwich': sandwich })
+class SandwichGeneratorView(View):
+    def get(self, request):
+        if request.method == 'GET':
+            selected_meat = random.choice(ingredients['meats'])
+            selected_cheese = random.choice(ingredients['cheeses'])
+            selected_toppings = random.choice(ingredients['toppings'])
+
+            sandwich = f'{selected_meat} & {selected_cheese} with {selected_toppings}'
+            return render(request, 'sandwich_generator.html', context = { 'sandwich' : sandwich})        
 ```
-* While you're developing a function like this, you can use print statements to debug -- making sure your functions in `views.py` are working correctly internally before examining their output in HTML
+* While you're developing a class like this, you can use print statements to debug -- making sure your classes in `views.py` are working correctly internally before examining their output in HTML
 Now that we've created a view, let's add it to our URL:
 
 `sandwich/urls.py`
 
 ```python
 from django.urls import path
-from . import views
+from sandwichapp.views import SandwichappView, IngredientsListView, SandwichGeneratorView
 
 urlpatterns = [
     # sandwich/
-    path('', views.sandwich, name='sandwich'),
-    # sandwich/ingredients/<str:ingredient_type>
-    path('ingredients/<str:ingredient_type>', views.ingredients_list, name='ingredients_list'),
-    # sandwich/random
-    path('random', views.sandwich_generator, name='sandwich_generator')
+    path('', SandwichappView.as_view(), name='sandwich'),
+    path('ingredients/<str:ingredient_type>', IngredientsListView.as_view(), name='ingredients_list'),
+    path('random', SandwichGeneratorView.as_view(), name='sandwich_generator')
 ]
 ```
 
