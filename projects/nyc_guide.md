@@ -87,7 +87,7 @@ The following steps can be carried out by one member of the team:
 
 ## Submission
 
--   The link to the group repository will be submitted by one of the group members in [Courseworks](https://courseworks2.columbia.edu/courses/141443/assignments/738771)
+-   The link to the group repository will be submitted by one of the group members in [Courseworks](https://courseworks2.columbia.edu/courses/152667/assignments/775312)
 -   The group repository must include a `README.md` markdown file. To format your markdown file beautifully, check out this [guide](https://www.markdownguide.org/basic-syntax) on markdown syntax
 -   The `README.md` must contain the following information
     -   Name of project
@@ -112,7 +112,7 @@ README | Github repo includes `README.md` on main branch | 3 | README uses [Mark
 Documentation | Code is well-commented | 2 | Python code should have comments with relevant explanations where needed. Comments should demonstrate understanding of the code and make functionality clear to anyone new to the project.
 Collaboration | Both group members are committing python code | 2 | Github repo commit history shows that both members are contributing to code equally
 DRY Design| Templates & dynamic URLs used properly to avoid repeated code | 3 | App should only have 1 HTML template for all activities, and 1 HTML template for all venues. HTML templates should use the [Django URL template tag](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#std:templatetag-url), and *no links should be hard-coded*
-Sitemap | All URLs exist | 2 | All links specified in the [assignment sitemap](https://github.com/Justice-Through-Code/fall_2021/blob/main/projects/nyc_guide.md#sitemap-and-urls) work without errors  
+Sitemap | All URLs exist | 2 | All links specified in the [assignment sitemap](https://github.com/Justice-Through-Code/spring_2021/blob/main/projects/nyc_guide.md#sitemap-and-urls) work without errors  
 Activity URLs  | Activity URLs linked correctly from borough pages| 3 | All links to activities listed on each borough page go to the correct corresponding activity page (for example clicking "beaches" on the "Brooklyn" page goes to `/brooklyn/beaches`) as created in the nested data structure in [`boroughs.py`](https://github.com/Justice-Through-Code/nyc-guide/blob/main/nyc/boroughs.py)
 Activity Display  | Each activity page displays correct info | 3 | Activity pages all display a list of the correct venues for that activity (only in the correct borough -- i.e. `/bronx/beaches` should not display beaches in Brooklyn or Queens) as specified by the data in [`boroughs.py`](https://github.com/Justice-Through-Code/nyc-guide/blob/main/nyc/boroughs.py). Activity page should also have a header displaying the activity type (i.e. "Beaches")
 Venue URLs | Venue URLs linked correctly from activities pages | 3| All links to venues listed on each activity page go to the correct corresponding venue page (for example clicking "Brighton Beach" on the `/brooklyn/beaches` page goes to `/brooklyn/beaches/brighton%20beach`) as in [`boroughs.py`](https://github.com/Justice-Through-Code/nyc-guide/blob/main/nyc/boroughs.py)
