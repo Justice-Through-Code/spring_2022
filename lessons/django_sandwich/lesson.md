@@ -2,16 +2,26 @@
 
 We're going to learn how to create a Sandwich Generator.
 
-Describe the application by its three pages (home, ingredients list, sandwich generator) and their content, functionality and URLs.
+Describe the application by its three pages (sandwichapp homepage, ingredients list, sandwich generator) and their content, functionality and URLs.
+
+# Start a new Django project
+
+$ django-admin startproject sandwich_box
+$ ls
+sandwich_box/
+
+$ cd sandwich_box
+$ ls
+manage.py   sandwich_box/
+
 
 # Run Django server
 
--   Navigate to `mysite` project we created in the previous lesson.
 -   Make sure `manage.py` exists in the directory
 
 ```
 $ ls
-manage.py*  mysite/
+manage.py*  sandwich_box/
 ```
 
 Then run the server
@@ -24,7 +34,7 @@ Performing system checks...
 
 System check identified no issues (0 silenced).
 October 05, 2021 - 21:15:29
-Django version 3.2.4, using settings 'mysite.settings'
+Django version 3.2.4, using settings 'sandwich_box.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
@@ -33,31 +43,32 @@ Quit the server with CONTROL-C.
 
 Before we start building the three pages, we must do some initial setup:
 
-## Create `sandwich` app
+## Create `sandwichapp` app
+
+- Be sure you are in the same directory as your `manage.py` and `sandwich_box`
 
 ```
 
-$ python manage.py startapp sandwich
+$ python manage.py startapp sandwichapp
 $ ls
-db.sqlite3 manage.py\* myapp/ mysite/ sandwich/
+db.sqlite3  manage.py   sandwich_box    sandwichapp
 
 ```
 
-## Register `sandwich` app with the `mysite` project
+## Register `sandwichapp` app with the `sandwich_box` project settings
 
-Edit `mysite/settings.py`
+Edit `sandwich_box/settings.py`
 
 ```python
 INSTALLED_APPS = [
-    'myapp.apps.MyappConfig',
-    'sandwich.apps.SandwichConfig',
+    'sandwichapp.apps.SandwichappConfig',
     ... # Leave all the other INSTALLED_APPS
 ]
 ```
-* Show students that the `SandwichConfig` class has been automatically set up in `apps.py` in the `sandwich` app (and that it inherits `AppConfig` -- django is doing a lot to set up the app for you!)
-## Create `sandwich/urls.py`
+* Show students that the `SandwichappConfig` class has been automatically set up in `apps.py` in the `sandwichapp` app (and that it inherits `AppConfig` -- django is doing a lot to set up the app for you!)
+## Create `sandwichapp/urls.py`
 
-`sandwich/urls.py`
+`sandwichapp/urls.py`
 
 ```python
 from django.urls import path
@@ -65,12 +76,12 @@ from django.urls import path
 urlpatterns = []
 ```
 
-## Add `sandwich` urls to `mysite` project
+## Add `sandwichapp` urls to `sandwich_box` project
 
-`mysite/urls.py`
+`sandwich_box/urls.py`
 
 ```python
-"""mysite URL Configuration
+"""sandwich_box URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -90,12 +101,11 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('myapp/', include('myapp.urls')),
     path('sandwich/', include('sandwich.urls')), # add this line of code
 ]
 ```
 
-# Sandwich home page
+# Sandwichapp home page
 
 Before we get started, let's review the page:
 
@@ -108,31 +118,23 @@ Before we get started, let's review the page:
 
 ## Create route
 
-`sandwich/urls.py`
+`sandwichapp/urls.py`
 
 -   The `path` function takes two more arguments, the Django `view` which we will create next and a `name` for the URL
 
 ```python
 from django.urls import path
-from your_app_name.views import SandwichView, IngredientsView, SandwichGeneratorView
+from sandwichapp.views import SandwichappView
 
-urlpatterns = [
-    # sandwich/
-    path('', SandwichView.as_view(), name='sandwich'),
-    path('ingredients/<str:ingredient_type>', IngredientsView.as_view(), name='ingredients_list),
-    path('random', SandwichGeneratorView.as_view(), name='sandwich_generator')
-]
+urlpatterns = []
 ```
 
-## Create view
-
-`sandwich/views.py`
+## Create view in `sandwichapp/views.py`
 
 ```python
 from django.shortcuts import render
 from django.http import Http404
 from django.views import View
-import random
 
 
 class SandwichappView(View):
@@ -148,11 +150,11 @@ class SandwichappView(View):
 
 Now that we've created a view, let's add it to our URL:
 
-`sandwich/urls.py`
+`sandwichapp/urls.py`
 
 ```python
 from django.urls import path
-from <your_app_name>.views import SandwichappView
+from sandwichapp.views import SandwichappView
 
 urlpatterns = [
     # sandwich/
@@ -160,9 +162,19 @@ urlpatterns = [
 ]
 ```
 
-Since we want the sandwich homepage to have hyperlinks to ingredients, let's create our ingredients data by creating our IngredientsView class in views.py:
+Since we want the sandwichapp homepage to have hyperlinks to ingredients, let's create our ingredients data by creating our IngredientsView class in views.py:
 
 ```python
+
+class SandwichappView(View):
+    def get(self, request):
+        if request.method == 'GET':
+            return render(
+                request = request,
+                template_name = 'sandwichapp.html',
+                context = {'ingredients': ingredients.keys()}
+            )
+
 
 class IngredientsListView(View):
     def get(self, request, ingredient_type):
@@ -180,10 +192,10 @@ class IngredientsListView(View):
 
 ## Create template
 
--   Create a directory called `templates` in `sandwich` directory
--   Create an HTML file `sandwich.html` in `templates`
+-   Create a directory called `templates` in `sandwichapp` directory
+-   Create an HTML file `sandwichapp.html` in `templates`
 
-`sandwich/templates/sandwich.html`
+`sandwichapp/templates/sandwichapp.html`
 
 -   We can use built-in [for loop template tag](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#for) to iterate over `ingredients` list
 
@@ -226,15 +238,15 @@ Before we get started, let's review the page:
 
 ## Create route
 
-`sandwich/urls.py`
+`sandwichapp/urls.py`
 
 ```python
 from django.urls import path
-from . import views
+from sandwichapp.views import SandwichappView, IngredientsView
 
 urlpatterns = [
     # sandwich/
-    path('', views.sandwich, name='sandwich'),
+    path('', SandwichappView.as_view(), name='sandwich'),
     # sandwich/ingredients/<str:ingredient_type>
     path('ingredients/<str:ingredient_type>', IngredientsListView.as_view(), name='ingredients_list'),
 ]
@@ -242,10 +254,10 @@ urlpatterns = [
 
 ## Create view
 
-`sandwich/views.py`
+`sandwichapp/views.py`
 
 -   Let's create a `ingredients` dictionary so that we can look up the `ingredient_type` on a `GET` request to the URL
--   Since we created key names `meats`, `cheeses`, `toppings` for `ingredients` dictionary, we can avoid redundancy in `sandwich` view and pass `ingredients.keys()` instead of the list we originally created as its context
+-   Since we created key names `meats`, `cheeses`, `toppings` for `ingredients` dictionary, we can avoid redundancy in `sandwichapp` view and pass `ingredients.keys()` instead of the list we originally created as its context
 
 ```python
 from django.shortcuts import render
@@ -281,7 +293,7 @@ class IngredientsListView(View):
 
 Now that we've created a view, let's add it to our URL:
 
-`sandwich/urls.py`
+`sandwichapp/urls.py`
 
 ```python
 from django.urls import path
@@ -298,7 +310,7 @@ urlpatterns = [
 
 -   Create an HTML file `ingredients_list.html` in `templates`
 
-`sandwich/templates/ingredients_list.html`
+`sandwichapp/templates/ingredients_list.html`
 
 ```html
 <h1>{{ ingredient_type|title }}</h1>
@@ -321,12 +333,14 @@ urlpatterns = [
 
 We can create a custom 404 error if a user tries to look up an `ingredient_type` that doesn't exist--e.g., `/sandwich/ingredients/bread`
 
-`sandwich/views.py`
+`sandwichapp/views.py`
 
 Let's import `Http404`
 
 ```python
+from django.shortcuts import render
 from django.http import Http404
+from django.views import View
 ```
 
 Raise `Http404` if `ingredient_type` passed does not exist:
@@ -355,7 +369,7 @@ class IngredientsListView(View):
 
 Before we get started, let's review the page:
 
--   This page is at `/sandwich/random`
+-   This page is at `/sandwichapp/random`
 -   This page has a heading with a random sandwich combo
 -   This page has a paragraph with an instruction to refresh the page for a new sandwich combo
 -   Refresh the page to show that a new random sandwich combo is created each time
@@ -389,6 +403,29 @@ import random
 
 ```python
 
+class SandwichappView(View):
+    def get(self, request):
+        if request.method == 'GET':
+            return render(
+                request = request,
+                template_name = 'sandwichapp.html',
+                context = {'ingredients': ingredients.keys()}
+            )
+
+class IngredientsListView(View):
+    def get(self, request, ingredient_type):
+        if request.method == 'GET':
+            if ingredient_type not in ingredients:
+                raise Http404(f'No such ingredient: {ingredient_type}')
+
+            return render(
+                request = request,
+                template_name = 'ingredients_list.html',
+                context={ 'ingredients': ingredients[ingredient_type],
+                            'ingredient_type': ingredient_type }
+            )
+
+
 class SandwichGeneratorView(View):
     def get(self, request):
         if request.method == 'GET':
@@ -402,7 +439,7 @@ class SandwichGeneratorView(View):
 * While you're developing a class like this, you can use print statements to debug -- making sure your classes in `views.py` are working correctly internally before examining their output in HTML
 Now that we've created a view, let's add it to our URL:
 
-`sandwich/urls.py`
+`sandwichapp/urls.py`
 
 ```python
 from django.urls import path
