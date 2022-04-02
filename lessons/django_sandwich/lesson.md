@@ -7,11 +7,15 @@ Describe the application by its three pages (sandwichapp homepage, ingredients l
 # Start a new Django project
 
 $ django-admin startproject sandwich_box
+
 $ ls
+
 sandwich_box/
 
 $ cd sandwich_box
+
 $ ls
+
 manage.py   sandwich_box/
 
 
@@ -133,7 +137,6 @@ urlpatterns = []
 
 ```python
 from django.shortcuts import render
-from django.http import Http404
 from django.views import View
 
 
@@ -178,10 +181,6 @@ class SandwichappView(View):
 
 class IngredientsListView(View):
     def get(self, request, ingredient_type):
-        if request.method == 'GET':
-            if ingredient_type not in ingredients:
-                raise Http404(f'No such ingredient: {ingredient_type}')
-
             return render(
                 request = request,
                 template_name = 'ingredients_list.html',
