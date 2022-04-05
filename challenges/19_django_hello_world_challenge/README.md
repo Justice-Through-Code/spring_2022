@@ -1,4 +1,4 @@
-# Django challenge: make the helo world app!
+# Django challenge: make the hello world app!
 
 In this challenge, to get started with Django, you'll remake the "Hello World" app from class and add a few extra features
 
