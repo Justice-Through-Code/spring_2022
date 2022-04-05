@@ -8,7 +8,7 @@ In this challenge, to get started with Django, you'll remake the "Hello World" a
 * In the `django-projects` folder:
 - Create a new folder called `hello-site` and cd into it
 - Run `python3 -m venv venv` to create a new virtual environment (it's common practice to name your virtual environment 'venv')
-- Run `source django-env/bin/activate` on Unix/MacOS or `django-env\Scripts\activate.bat` on Windows to activate the virtual environment
+- Run `source venv/bin/activate` on Unix/MacOS or `venv\Scripts\activate.bat` on Windows to activate the virtual environment
 - Run `pip install django` to install Django
 - Run `pip freeze > requirements.txt` (take a look at the new requirements file that popped up!)
 
@@ -196,7 +196,7 @@ Add a new a URL that takes a string parameter called `name`. The goal is to have
 ```python
 from django.urls import path
 
-from sayhello.views import HelloWorldView, HelloView
+from helloapp.views import HelloWorldView, HelloView
 
 urlpatterns = [
     # helloapp/
