@@ -7,7 +7,7 @@ In this challenge, you'll create a new django project called 'Color Picker'.
 * First, go to your `django-projects` directory
 - Create a new folder called `color-picker-container` and `cd` into it
 - Run `python3 -m venv venv` (or whichever version of this your computer uses) to create a new virtual environment (it's common practice to name your virtual environment 'venv')
-- Run `source django-env/bin/activate` on Unix/MacOS or `django-env\Scripts\activate.bat` on Windows to activate the virtual environment (or whichever instruction works for you!)
+- Run `source venv/bin/activate` on Unix/MacOS or `venv\Scripts\activate.bat` on Windows to activate the virtual environment (or whichever instruction works for you!)
 - Run `pip install django` to install Django
 - Run `pip freeze > requirements.txt` (take a look at the new requirements file that popped up!)
 
@@ -149,7 +149,7 @@ Let's add some code to pull in our django form and send it to our html template
 from django.shortcuts import render
 from django.views import View
 
-from color_maker.forms import ColorPickerForm
+from paintapp.forms import ColorPickerForm
 
 
 # Create your views here.
@@ -165,7 +165,7 @@ class ColorPickerView(View):
             'blue': 255,
         }
 
-        return render(request, 'color_picker.html', context=context)
+        return render(request, 'paint.html', context=context)
 ```
 
 We're sending the form, as well as our default numbers for the color of our page. rgb(255, 255, 255) is white!
@@ -209,11 +209,11 @@ In your `paintapp` directory, create a file called `urls.py` as below:
 ```python
 from django.urls import path
 
-from paintapp.views import PaintView
+from paintapp.views import ColorPickerView
 
 urlpatterns = [
     # paintapp/
-    path('', PaintView.as_view(), name='paint'),
+    path('',  ColorPickerView.as_view(), name='paint'),
 ]
 ```
 
@@ -336,7 +336,7 @@ class ColorPickerView(View):
             'blue': 255,
         }
 
-        return render(request, 'color_picker.html', context=context)
+        return render(request, 'paint.html', context=context)
 
 
     # This is the new content
