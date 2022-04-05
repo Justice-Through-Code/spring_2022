@@ -355,7 +355,7 @@ class ColorPickerView(View):
             'blue': blue,
         }
 
-        return render(request, 'color_picker.html', context=context)
+        return render(request, 'paint.html', context=context)
 ```
 
 This time, we're going to collect the POST data (sent to Django in the `request` object as `request.POST`), and send it to our form to update the numbers that show up in it. We are also going to take the data in the POST object and send them into our context for our CSS to use, to actually update the color of our page.
