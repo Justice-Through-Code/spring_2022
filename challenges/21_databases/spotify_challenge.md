@@ -6,7 +6,7 @@ Before getting started with the challenge, let's peek into all the tables in the
 
 | ID  | Name        |
 | --- | ----------- |
-| 1   | The Beetles |
+| 1   | The Beatles |
 | 2   | The Beetles |
 
 ### Albums
