@@ -6,7 +6,7 @@ In this challenge, you'll build on the Django to-do list app demonstrated in tod
 
 
 ### Setup
-1. Download [this zip file](https://courseworks2.columbia.edu/courses/141443/files/folder/django_templates) from Canvas containing the `todoproject.zip`. This is the code demonstrated during class today. 
+1. Download [this zip file](https://courseworks2.columbia.edu/courses/152667/files/folder/django_templates) from Canvas containing the `todoproject.zip`. This is the code demonstrated during class today. 
     * Unzip the file and make sure to put the whole folder into the `django_projects` folder inside personal folder in your pod repo
 2. Make sure you're on a new branch in your pod repo *and* make sure you have activated your virtual environment for django
 
