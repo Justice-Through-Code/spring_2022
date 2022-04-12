@@ -39,33 +39,28 @@ Your first challenge for the final WOW project is identifying the MVP for your D
 
 For the first part of your project, you'll build a **wireframe** of your MVP, which is a visual guide representing what your site will look like, and what features it will have. See more info on wireframes [here](https://balsamiq.com/learn/articles/what-are-wireframes/).
 
-### Getting set up for wireframews with MockFlow (You'll do most of this in class following a dedicated workshop)
+### Getting set up for wireframes with Miro (You'll do most of this in class following a dedicated workshop)
 
--   You'll use a site called MockFlow to build wireframes. This site will let you basically "sketch" what your app will look like to users.
+-   You'll use a site called Miro to build wireframes. This site will let you basically "sketch" what your app will look like to users.
 
--   Each group member should make a [MockFlow](https://mockflow.com/) account, but you'll only need one project (you'll work on this in class to do most of this together over Zoom). All group members should collaborate on the same project, so first one member will set up a project, then add collaborators by clicking "share" in the upper right-hand corner:
+-   Each group member should make a [Miro](https://miro.com/) account, but you'll only need one project (you'll work on this in class to do most of this together over Zoom). All group members should collaborate on the same Miro board, so first one member will set up a project, then add collaborators by clicking "share" in the upper right-hand corner:
 
-<img src='images/share.png' width=200>
-
--   Then add group members' email addresses to collab (note: collaborators will only be able to be "reviewers", not "editors" with the free version. So, the actual construction of the wireframe should happen _when all group members are present_):
-
-<img src='images/member.png' width=400>
+-   Then add group members' email addresses. Make sure that "Can edit" is set for both "Invite to team and board" and "Team access to board" options.
 
 ### To build your wireframe:
 
--   It is very open-ended how you create your wireframe using MockFlow, but it should accomplish the following:
+-   It is very open-ended how you create your wireframe using Miro, but it should accomplish the following:
     1. Demonstrate visually what your app will look like for users with a mock-up of each page you will build.
     2. You'll need to have mock-ups of at _least 2 page templates_ in your wireframe
     3. Your wireframe should have clear information on what any buttons, forms, or hyperlinks do. It should be clear how users can interact with the app!
 -   Remember that although this is extremely open-ended, **you want to tailor your wireframe to represent your eventual Minimum Viable Product (MVP)**
+
     -   Since you'll have to build everything represented in your wireframe using Django, make sure your are thinking ahead to make sure your proposed plan is feasible!
     -   As JTC instructors and TAs, we will help figure out if you will need to scale back to a smaller set of pages or features. _You will get feedback on your wireframe MVP well before you have to start implementing it with Django_
 
-## How to submit:
-
 ### Wireframe
 
--   Export a PDF file from MockFlow containing all of your wireframe pages, then upload this PDF to Courseworks.
+-   Export the Miro board as a PDF containing all of your wireframe pages, then upload this PDF to Courseworks.
 -   Also, please upload the PDF to your group's Google Drive folder, so your TAs and mentors can see it and help with it.
 
 ### 1-page written proposal
