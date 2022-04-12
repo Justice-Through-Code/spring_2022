@@ -43,7 +43,6 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
 
 <img width="1675" alt="Screen Shot 2022-04-11 at 10 29 28 PM" src="https://user-images.githubusercontent.com/7483633/162867276-b4c38295-b284-4909-bc21-562a36efa66b.png">
 
-
 -   You'll use a site called Miro to build wireframes. This site will let you basically "sketch" what your app will look like to users.
 
 -   Each group member should make a [Miro](https://miro.com/) account, but you'll only need one project (you'll work on this in class to do most of this together over Zoom). All group members should collaborate on the same Miro board, so first one member will set up a project, then add collaborators by clicking "share" in the upper right-hand corner:
@@ -83,7 +82,7 @@ In addition to the wireframe, your group should submit a written proposal that i
     -   **Update** - The app must allow a user to update items in the database, E.g. when a user edits a todo item in the todo app and saves it, the todo item is updated in the database.
     -   **Delete** - The app must allow a user to delete items in the database. E.g. when a user removes a todo item in the todo app, the todo item is deleted from the database.
 
-Clearly state which functionalities in your app would employ these operations. **Missing one or more of these operations will hinder your ability to move forward in the proposal process.** 
+Clearly state which functionalities in your app would employ these operations. **Missing one or more of these operations will hinder your ability to move forward in the proposal process.**
 
 -   **Paragraph 3:** A description of the pages (routes) you're proposing in the wireframe, and how they link together.
 
@@ -120,7 +119,8 @@ All group members should:
 
 -   Sign up for a free account at [Diagrams.net](https://www.diagrams.net/)
 -   Make a "new diagram", and choose the "Entity-Relationship Diagram" template from the options below for a nice template for getting started
-    <img width="755" alt="Screen Shot 2021-11-18 at 6 26 21 PM" src="https://user-images.githubusercontent.com/16904546/142513750-afe9c7c1-3e21-4e25-b50a-bf28138f600b.png">
+
+<img width="755" alt="Screen Shot 2021-11-18 at 6 26 21 PM" src="https://user-images.githubusercontent.com/16904546/142513750-afe9c7c1-3e21-4e25-b50a-bf28138f600b.png">
 
 ## Submit your Entity-Relationship Diagram
 
@@ -136,7 +136,8 @@ Just like the previous projects, the final submission for this project will be a
 The following can be completed by one member of your group to create a Github repo that your group will use for the project.
 
 1. Create a new repository for the group on Github
-   <img width="500" alt="Screen Shot 2021-10-28 at 4 49 41 PM" src="https://user-images.githubusercontent.com/7483633/139334999-4075825f-e1b7-4462-9b6c-ebd5daa9c0b6.png">
+
+<img width="500" alt="Screen Shot 2021-10-28 at 4 49 41 PM" src="https://user-images.githubusercontent.com/7483633/139334999-4075825f-e1b7-4462-9b6c-ebd5daa9c0b6.png">
 
 2. Invite your group member to the repository to start collaborating on the project!
 
