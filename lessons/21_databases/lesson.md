@@ -180,7 +180,7 @@ Looking at our `Songs` table, are there other objects we could separate into the
 
 | ID  | Name        |
 | --- | ----------- |
-| 1   | The Beetles |
+| 1   | The Beatles |
 | 2   | The Beetles |
 
 # One-to-many relationship
@@ -211,7 +211,7 @@ At first glance this might seem like another one-to-many relationship but here's
 
 | ID  | Name        |
 | --- | ----------- |
-| 1   | The Beetles |
+| 1   | The Beatles |
 | 2   | The Beetles |
 | 3   | Wings       |
 
