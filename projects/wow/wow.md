@@ -33,7 +33,7 @@ Your first challenge for the final WOW project is identifying the MVP for your D
 
 <img src='https://gearheart.io/uploads/pasted_image_0_55d87402ec.png' width=800>
 
-# Proposal Part 1: Wireframes + short written proposal (Due Thursday, November 18)
+# Proposal Part 1: Wireframes + short written proposal (Due Friday, April 22)
 
 **Note:** Most of the actual wireframe building will happen in class, where you'll do a workshop on wireframes then have guided time in your groups to build them.
 
@@ -92,7 +92,7 @@ Clearly state which functionalities in your app would employ these operations. *
 
 <img src='https://wcs.smartdraw.com/website-wireframe/img/wireframe-example-template.png?bn=15100111809' width = 800>
 
-# Proposal Part 2: Models (Due Monday, November 29)
+# Proposal Part 2: Models (Due Friday, April 29)
 
 The next stage of your project after you have defined your MVP and made your wireframe is to diagram out how your database will work. To do this, your group will make an [Entity-Relationship Diagram (ER Diagram)](https://www.lucidchart.com/pages/er-diagrams) using LucidChart.
 
@@ -124,7 +124,7 @@ All group members should:
 -   Export your ER Diagram as a PDF, then upload the PDF to Courseworks when you're done!
 -   Also, please upload the PDF to your group's Google Drive folder, so your TAs and mentors can see it and help with it.
 
-# WOW Final: Minimum Viable Product (Due Thursday, December 16)
+# WOW Final: Minimum Viable Product (Due Friday, May 27)
 
 Just like the previous projects, the final submission for this project will be a link to a public Github repository. No files will need to be uploaded to Courseworks.
 
