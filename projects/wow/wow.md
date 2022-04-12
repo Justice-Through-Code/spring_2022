@@ -72,9 +72,15 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
 
 In addition to the wireframe, your group should submit a written proposal that is 1 page of text or less to Canvas. This proposal should contain the following:
 
--   **Paragraph 1:** A summary of your app's MVP functionality. Be specific here, because we will evaluate your final project on completion of this functionality (once you have a chance to incorporate JTC staff feedack)
--   **Paragraph(s) 2-3:** A description of the pages (routes) you're proposing in the wireframe, and how they link together.
--   **Paragraph(s) 3-4:** How you propose to break up the project into separate tasks among group members, and any challenges you anticipate in putting the project together with Django.
+-   **Paragraph(s) 1-2:** A summary of your app's MVP functionality. The overall functionality must employ **CRUD** (Create, Read, Update, Delete) operations:
+    -   **Create** - The app must allow a user to create items in the database. E.g. when a user adds a todo item in the todo app, the todo item is added to the database.
+    -   **Read** - The app must read items from a database. E.g. Displaying one or more todo items on a page in the todo app, the todo items are read from the database.
+    -   **Update** - The app must allow a user to update items in the database, E.g. when a user edits a todo item in the todo app and saves it, the todo item is updated in the database.
+    -   **Delete** - The app must allow a user to delete items in the database. E.g. when a user removes a todo item in the todo app, the todo item is deleted from the database.
+
+Clearly state which functionalities in your app would employ these operations. **Missing one or more of these operations will hinder your ability to move forward in the proposal process.**
+
+-   **Paragraph 3:** A description of the pages (routes) you're proposing in the wireframe, and how they link together.
 
 <img src='images/link.png' width=400>
 
