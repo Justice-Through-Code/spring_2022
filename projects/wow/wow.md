@@ -8,7 +8,7 @@ This is a great chance both to show your coding skills _and_ your creativity, so
 
 ## Overview
 
-Like the Blog App and To-do List App from the class challenges, your WOW project should have CRUD functionality (the app can create, read, update, and delete data dynamically based on user interactions).
+Like the To-do List App from the class challenges, your WOW project should have CRUD functionality (the app can create, read, update, and delete data dynamically based on user interactions).
 
 -   This time, however, what your app does is up to you! For example:
     -   Review site for books, movies or consumer goods
