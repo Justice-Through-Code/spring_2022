@@ -65,12 +65,12 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
 
 ### Wireframe
 
--   Export a PDF file from MockFlow containing all of your wireframe pages, then upload this PDF to Canvas.
+-   Export a PDF file from MockFlow containing all of your wireframe pages, then upload this PDF to Courseworks.
 -   Also, please upload the PDF to your group's Google Drive folder, so your TAs and mentors can see it and help with it.
 
 ### 1-page written proposal
 
-In addition to the wireframe, your group should submit a written proposal that is 1 page of text or less to Canvas. This proposal should contain the following:
+In addition to the wireframe, your group should submit a written proposal that is 1 page of text or less to Courseworks. This proposal should contain the following:
 
 -   **Paragraph(s) 1-2:** A summary of your app's MVP functionality. The overall functionality must employ **CRUD** (Create, Read, Update, Delete) operations:
     -   **Create** - The app must allow a user to create items in the database. E.g. when a user adds a todo item in the todo app, the todo item is added to the database.
@@ -121,12 +121,12 @@ All group members should:
 
 ## Submit your Entity-Relationship Diagram
 
--   Export your ER Diagram as a PDF, then upload the PDF to Canvas when you're done!
+-   Export your ER Diagram as a PDF, then upload the PDF to Courseworks when you're done!
 -   Also, please upload the PDF to your group's Google Drive folder, so your TAs and mentors can see it and help with it.
 
 # WOW Final: Minimum Viable Product (Due Thursday, December 16)
 
-Just like the previous projects, the final submission for this project will be a link to a public Github repository. No files will need to be uploaded to Canvas.
+Just like the previous projects, the final submission for this project will be a link to a public Github repository. No files will need to be uploaded to Courseworks.
 
 ## Create your group repository
 
@@ -163,7 +163,7 @@ The following can be completed by one member of your group to create a Github re
 
 ### WOW Submission
 
--   The link to the group repository will be submitted by one of the group members in [Courseworks](https://courseworks2.columbia.edu/courses/141443/assignments/738771)
+-   The link to the group repository will be submitted by one of the group members in [Courseworks](https://courseworks2.columbia.edu/courses/152667/assignments/775337)
 -   The group repository must include a `README.md` markdown file. To format your markdown file beautifully, check out this [guide](https://www.markdownguide.org/basic-syntax) on markdown syntax
 -   The `README.md` must contain the following information
     -   Name of project
@@ -179,7 +179,7 @@ The following can be completed by one member of your group to create a Github re
 
 | Category      | Requirement                                                                  | Points | Description                                                                                                                                                                                                                                                                                                                            |
 | ------------- | ---------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Github        | Github repo is public & submitted to canvas                                  | 2      | Make sure the JTC team can easily access your submission!                                                                                                                                                                                                                                                                              |
+| Github        | Github repo is public & submitted to Courseworks                             | 2      | Make sure the JTC team can easily access your submission!                                                                                                                                                                                                                                                                              |
 | Documentation | Github repo includes `README.md` on main branch                              | 3      | README uses [Markdown formatting](https://www.markdownguide.org/cheat-sheet/) for clear organization. README has name of project, names of group members, instructions on how to make/run a virtual environment with `venv` and install all code dependencies with `pip` & _screenshots from the app with instructions on how to run_. |
 | Documentation | Code is well-commented                                                       | 2      | Python code should have comments with relevant explanation of views, models, routes, and forms. Comments should demonstrate understanding of the code and make functionality clear to anyone new to the project.                                                                                                                       |
 | Collaboration | All group members are using issues, committing, & reviewing python code      | 3      | Github repo commit & pull request history shows that all group members are creating issues, contributing to code, making new features & edits on branches, and using pull requests to review code before merging to `main`.                                                                                                            |
