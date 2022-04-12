@@ -41,11 +41,18 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
 
 ### Getting set up for wireframes with Miro (You'll do most of this in class following a dedicated workshop)
 
+<img width="1675" alt="Screen Shot 2022-04-11 at 10 29 28 PM" src="https://user-images.githubusercontent.com/7483633/162867276-b4c38295-b284-4909-bc21-562a36efa66b.png">
+
+
 -   You'll use a site called Miro to build wireframes. This site will let you basically "sketch" what your app will look like to users.
 
 -   Each group member should make a [Miro](https://miro.com/) account, but you'll only need one project (you'll work on this in class to do most of this together over Zoom). All group members should collaborate on the same Miro board, so first one member will set up a project, then add collaborators by clicking "share" in the upper right-hand corner:
 
+<img width="235" alt="Screen Shot 2022-04-11 at 10 04 29 PM" src="https://user-images.githubusercontent.com/7483633/162866483-4c5075e4-822e-4840-84a9-650335466364.png">
+
 -   Then add group members' email addresses. Make sure that "Can edit" is set for both "Invite to team and board" and "Team access to board" options.
+
+<img width="1680" alt="Screen Shot 2022-04-11 at 10 04 43 PM" src="https://user-images.githubusercontent.com/7483633/162866533-16b6532a-1fb7-4795-8c8f-de32366e94d5.png">
 
 ### To build your wireframe:
 
@@ -61,6 +68,9 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
 ### Wireframe
 
 -   Export the Miro board as a PDF containing all of your wireframe pages, then upload this PDF to Courseworks.
+
+<img width="929" alt="Screen Shot 2022-04-11 at 10 25 01 PM" src="https://user-images.githubusercontent.com/7483633/162866727-57b3ac25-834f-42a3-93eb-88b25c3b7d02.png">
+
 -   Also, please upload the PDF to your group's Google Drive folder, so your TAs and mentors can see it and help with it.
 
 ### 1-page written proposal
@@ -73,11 +83,9 @@ In addition to the wireframe, your group should submit a written proposal that i
     -   **Update** - The app must allow a user to update items in the database, E.g. when a user edits a todo item in the todo app and saves it, the todo item is updated in the database.
     -   **Delete** - The app must allow a user to delete items in the database. E.g. when a user removes a todo item in the todo app, the todo item is deleted from the database.
 
-Clearly state which functionalities in your app would employ these operations. **Missing one or more of these operations will hinder your ability to move forward in the proposal process.**
+Clearly state which functionalities in your app would employ these operations. **Missing one or more of these operations will hinder your ability to move forward in the proposal process.** 
 
 -   **Paragraph 3:** A description of the pages (routes) you're proposing in the wireframe, and how they link together.
-
-<img src='images/link.png' width=400>
 
 ### Example wireframe for Youtube
 
