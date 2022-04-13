@@ -214,6 +214,6 @@ If you would like to add Public APIs or frontend libraries after the MVP is turn
 -   Python Classes and Inheritance
 -   Django [URLs](https://docs.djangoproject.com/en/3.2/topics/http/urls/) to understand how to capture parameters in your views
 -   Django [Templates](https://docs.djangoproject.com/en/3.2/ref/templates/language/)
--   [Relational Databases]()
--   Django [Models](https://github.com/Justice-Through-Code/fall_2021/blob/main/lessons/django_todo/lesson.md)
--   Django [Models with many-to-many and one-to-many relationships](https://github.com/Justice-Through-Code/fall_2021/blob/main/lessons/django_blog/lesson.md)
+-   [Relational Databases](images/relational_database_design.pdf)
+-   Django [Models](https://docs.djangoproject.com/en/4.0/topics/db/models/)
+-   Django [Models with many-to-many and one-to-many relationships](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/)
