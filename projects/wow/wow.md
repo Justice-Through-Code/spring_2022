@@ -61,8 +61,8 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
     3. Your wireframe should have clear information on what any buttons, forms, or hyperlinks do. It should be clear how users can interact with the app!
 -   Remember that although this is extremely open-ended, **you want to tailor your wireframe to represent your eventual Minimum Viable Product (MVP)**
 
-    -   Since you'll have to build everything represented in your wireframe using Django, make sure your are thinking ahead to make sure your proposed plan is feasible!
-    -   As JTC instructors and TAs, we will help figure out if you will need to scale back to a smaller set of pages or features. _You will get feedback on your wireframe MVP well before you have to start implementing it with Django_
+    -   Since you'll have to build everything represented in your wireframe using Django, make sure you are thinking ahead to make sure your proposed plan is feasible!
+    -   As JTC instructors and TAs, we will help figure out if you will need to scale back to a smaller set of pages or features. _You will get feedback on your wireframe MVP well before you start implementing it with Django_
 
 ### Wireframe
 
@@ -70,11 +70,11 @@ For the first part of your project, you'll build a **wireframe** of your MVP, wh
 
 <img width="929" alt="Screen Shot 2022-04-11 at 10 25 01 PM" src="https://user-images.githubusercontent.com/7483633/162866727-57b3ac25-834f-42a3-93eb-88b25c3b7d02.png">
 
--   Also, please upload the PDF to your group's Google Drive folder, so your TAs and mentors can see it and help with it.
+-   Also, please upload the PDF to your group's Google Drive folder (JTC will share this folder with your team once the members are confirmed), so your TAs and mentors can see it and provide help and feedback as needed.
 
 ### 1-page written proposal
 
-In addition to the wireframe, your group should submit a written proposal that is 1 page of text or less to Courseworks. This proposal should contain the following:
+In addition to the wireframe, your group will submit a written proposal that is 1 page of text or less to Courseworks. This proposal should contain the following:
 
 -   **Paragraph(s) 1-2:** A summary of your app's MVP functionality. The overall functionality must employ **CRUD** (Create, Read, Update, Delete) operations:
     -   **Create** - The app must allow a user to create items in the database. E.g. when a user adds a todo item in the todo app, the todo item is added to the database.
@@ -82,9 +82,9 @@ In addition to the wireframe, your group should submit a written proposal that i
     -   **Update** - The app must allow a user to update items in the database, E.g. when a user edits a todo item in the todo app and saves it, the todo item is updated in the database.
     -   **Delete** - The app must allow a user to delete items in the database. E.g. when a user removes a todo item in the todo app, the todo item is deleted from the database.
 
-Clearly state which functionalities in your app would employ these operations. **Missing one or more of these operations will hinder your ability to move forward in the proposal process.**
+Clearly state which functionalities in your app would employ these operations. **All four CRUD operations are required to move forward with the proposal process.**
 
--   **Paragraph 3:** A description of the pages (routes) you're proposing in the wireframe, and how they link together.
+-   **Paragraph 3:** A description of the pages (routes/urls) you're proposing in the wireframe, and how they link together.
 
 ### Example wireframe for Youtube
 
@@ -96,7 +96,7 @@ Clearly state which functionalities in your app would employ these operations. *
 
 # Proposal Part 2: Models (Due Friday, April 29)
 
-The next stage of your project after you have defined your MVP and made your wireframe is to diagram out how your database will work. To do this, your group will make an [Entity-Relationship Diagram (ER Diagram)](https://www.lucidchart.com/pages/er-diagrams) using LucidChart.
+The next stage of your project after you have defined your MVP and made your wireframe is to diagram out how your database will work. To do this, your group will make an [Entity-Relationship Diagram (ER Diagram)](https://www.lucidchart.com/pages/er-diagrams) using [Diagrams.net](https://www.diagrams.net/).
 
 **Note:** Most of the actual ER Diagram building will happen in class, where you'll do a workshop on them, and then have guided time in your groups to build them.
 
@@ -105,13 +105,13 @@ The next stage of your project after you have defined your MVP and made your wir
 -   The point of the ER Diagram is to map visually what your MVP database will look like. **Your ER Diagram should map directly to your MVP** to outline the models you will create in Django using `models.py` to construct your database
 -   Your ER Diagram **must** outline at least **1 one-to-many** and **1 many-to-many** entity relationship. You may have more if you want.
 
-### Example ER Diagram from the Blog App Project
+### Example ER Diagram from the Todo App Project (Part 2)
 
-Your ER Diagram should look similar in design to something like this:
+Your ER Diagram should look similar in design to this (with at least one additional table + one-to-many relationship):
 
 <img src='images/blog_erd.png'>
 
-**Note:** Django handles the many-to-many relationship shown below using [models.ManyToManyField](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_many/) under the hood. You should draw out how you'll implement at least 1 many-to-many relationship like this in your ER diagram, but you'll be able to use `models.ManyToManyField` once you actually code this in Django (i.e. you won't need to make a distinct `PostTags` model in `models.py`).
+**Reminder:** Django handles the many-to-many relationship shown below using [models.ManyToManyField](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_many/) under the hood. You should draw out how you'll implement at least 1 many-to-many relationship like this in your ER diagram, but you'll be able to use `models.ManyToManyField` once you actually code this in Django (i.e. you won't need to make a distinct `PostTags` model in `models.py`).
 
 ## Making your Entity-Relationship Diagram (you'll do this mostly in class following the workshop)
 
@@ -139,11 +139,19 @@ The following can be completed by one member of your group to create a Github re
 
 <img width="500" alt="Screen Shot 2021-10-28 at 4 49 41 PM" src="https://user-images.githubusercontent.com/7483633/139334999-4075825f-e1b7-4462-9b6c-ebd5daa9c0b6.png">
 
-2. Invite your group member to the repository to start collaborating on the project!
+2. Invite
+   1. Your teams members
+   2. Your instructors
+   3. Your technical mentor
+
+    to the repository to start collaborating on the project!
 
 3. This time, you'll be making the Django project from scratch. So, one group member should initially set up a new Django project in your repo.
 
 4. Then, all group members can clone the repo to their own computers. You can work together to start building the app from there.
+
+
+Once your proposals are approved to get started, we'll go over how to break up the work into small, individual tasks that your team can divy up as you go. We'll be using GitHub's project planning system for this, [GitHub Issues](https://github.com/features/issues). Take a look at the video on that link to see how it works!
 
 ## MVP Requirements
 
@@ -151,19 +159,20 @@ The following can be completed by one member of your group to create a Github re
 
 -   All members must be contributing & commiting Python code
 -   Development of the project should make use of issues & separate branches in git for new features or edits, pull requests, and review of your collaborators' code. When evaluating your project, JTC instructors & TAs will check the pull request history to look for use of issues, branches, and code review.
--   App has CRUD features (Create, Read, Update, Delete)
--   Minimum one URL with dynamic route path
+-   App has all four `CRUD` features (Create, Read, Update, Delete)
+-   Minimum one URL _with dynamic route path_ (a variable in the path), minimum two URLs total
 -   Minimum **one one-to-many** and **one many-to-many relationship** (you can have more) in Django models
-    -   Models must be registered in admin view
 -   Minimum **one Django form**
--   Must employ use of 2 types of template syntax like `url`, `for loops`, `if/else`, and filters
+-   Must employ use of at least 2 types of template syntax like `url`, `for loops`, `if/else`, and filters
 -   Must complete all items proposed in MVP proposal
 
 ### Constraints:
 
 -   No Public APIs
 -   No frontend Javascript library/frameworks (jQuery, React).
--   CSS library frameworks are fine (Bootstrap), however we are not evaluating on your aesthetic chops!
+-   CSS library frameworks are fine (we recommend [Bootstrap](https://getbootstrap.com/)), however we are not evaluating on your aesthetic chops!
+
+If you would like to add Public APIs or frontend libraries after the MVP is turned in, feel free! These constraints solely pertain to the **minimum** piece of the _minimum viable product_.
 
 ### WOW Submission
 
@@ -174,8 +183,10 @@ The following can be completed by one member of your group to create a Github re
     -   Names of group members and their Github usernames
     -   Instruction on how to create and run a virtual environment using `venv`
     -   Instruction on how to install project dependencies with `pip`
-    -   Screenshots of your app, and instruction on how to run the Django application
--   The commit history in Github should show equal contributions from all group members
+    -   Instruction on how to run the Django application
+    -   Screenshots of your app
+-   The commit history in GitHub should show roughly equal contributions from all group members
+    -   Pairing is encouraged! Just make sure that you trade off on who's 'driving' (who's coding and who's watching) so that everyone gets practice
 -   Your working app should be on the `main` branch of the repository
 -   You are not required to deploy your application. JTC will provide resources for learning how to do this following the end of the class, but it is not part of the WOW project and should not be part of your MVP.
 
@@ -191,8 +202,8 @@ The following can be completed by one member of your group to create a Github re
 | MVP           | Submission accomplishes MVP as proposed                                      | 5      | Submission implements the project proposal (as approved by JTC staff) described by the wireframe and ER Diagram.                                                                                                                                                                                                                       |
 | Django        | App runs cleanly                                                             | 2      | App runs without errors when tested for functionality specified by in the MVP. App should run cleanly based on the code on the `main` branch following instructions outlined in the `README.md` file.                                                                                                                                  |
 | Django        | App has CRUD functionality                                                   | 5      | App can create, read, update, and delete data based on user interactions.                                                                                                                                                                                                                                                              |
-| Django        | Routes                                                                       | 3      | Minimum one URL with dynamic route path                                                                                                                                                                                                                                                                                                |
-| Django        | Models                                                                       | 5      | Minimum **one one-to-many** and **one many-to-many relationship** (you can have more) in Django models, and models must be registered in admin view                                                                                                                                                                                    |
+| Django        | Routes                                                                       | 3      | Minimum one URL with dynamic route path, minimum 2 URLs total                                                                                                                                                                                                                                                                                                |
+| Django        | Models                                                                       | 5      | Minimum **one one-to-many** and **one many-to-many relationship** (you can have more) in Django models view                                                                                                                                                                                    |
 | Django        | Form                                                                         | 3      | At least 1 Django form, where the database is updated via a POST request when the form is submitted                                                                                                                                                                                                                                    |
 | Django        | Template Syntax                                                              | 3      | Employ use of at least 2 types of template syntax like `url`, `for loops`, `if/else`, and filters                                                                                                                                                                                                                                      |
 | Other         | No use of Public APIs or additional frontend Javascript libraries/frameworks | 2      | These tools are beyond the scope of the course, so please do not use them for the WOW submission. _After you turn in your WOW for completion of JTC, feel free to add any other tools you wish!_                                                                                                                                       |
